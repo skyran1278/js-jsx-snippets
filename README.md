@@ -10,17 +10,17 @@
 
 Users appreciate release notes as you update your extension.
 
-### 1.0.0
+### 0.0.1
 
 Initial release of js-jsx-snippets
 
-### 1.0.1
+### 0.0.2
 
-Fixed issue #.
+modify snippets
 
-### 1.1.0
+### 0.0.3
 
-Added features X, Y, and Z.
+update readme
 
 ## Snippets
 
