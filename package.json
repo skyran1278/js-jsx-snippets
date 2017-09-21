@@ -1,0 +1,33 @@
+{
+  "name": "js-jsx-snippets",
+  "displayName": "js-jsx-snippets",
+  "description": "js jsx",
+  "version": "0.0.1",
+  "publisher": "skyran",
+  "engines": {
+    "vscode": "^1.16.0"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "language": "javascript",
+        "path": "./snippets/snippets.json"
+      },
+      {
+        "language": "javascriptreact",
+        "path": "./snippets/snippets.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/snippets.json"
+      },
+      {
+        "language": "typescriptreact",
+        "path": "./snippets/snippets.json"
+      }
+    ]
+  }
+}
