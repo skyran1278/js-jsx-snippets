@@ -1,27 +1,27 @@
 {
   "import": {
     "prefix": "imp",
-    "body": "import ${2:moduleName} from '${1:module}'$0"
+    "body": "import ${2:moduleName} from '${1:module}'$0;"
   },
   "importNoModuleName": {
     "prefix": "imn",
-    "body": "import '${1:module}'$0"
+    "body": "import '${1:module}'$0;"
   },
   "importDestructing": {
     "prefix": "imd",
-    "body": "import { $2 } from '${1:module}'$0"
+    "body": "import { $2 } from '${1:module}'$0;"
   },
   "import React, { Component }": {
     "prefix": "imrc",
-    "body": "import React, { Component } from 'react'"
+    "body": "import React, { Component } from 'react';"
   },
   "import redux statement": {
     "prefix": "redux",
-    "body": "import { connect } from 'react-redux'"
+    "body": "import { connect } from 'react-redux';"
   },
   "consoleLog": {
     "prefix": "clg",
-    "body": "console.log(${1:object})",
+    "body": "console.log(${1:object});",
     "description": "Displays a message in the console"
   },
   "EslintDisableLine": {
