@@ -1,4 +1,4 @@
-# Js Jsx Snippets
+# JS JSX Snippets
 
 ## Supported languages (file extensions)
 * JavaScript (.js)
