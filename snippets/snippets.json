@@ -41,7 +41,7 @@
   },
   "reactClassComponentPropTypes": {
     "prefix": "rccp",
-    "body": "import React, { Component } from 'react';\nimport PropTypes from 'prop-types';\n\n\nconst propTypes = {\n\t$0\n};\n\n\nclass ${1:componentName} extends Component {\n\trender() {\n\t\treturn (\n\t\t\t<div>\n\t\t\t\t$0\n\t\t\t</div>\n\t\t);\n\t}\n}\n\n\n${1:componentName}.propTypes = propTypes;\n\n\nexport default ${1:componentName};\n",
+    "body": "import React, { Component } from 'react';\nimport PropTypes from 'prop-types';\n\n\nconst propTypes = {\n\t\n};\n\n\nclass ${1:componentName} extends Component {\n\trender() {\n\t\treturn (\n\t\t\t<div>\n\t\t\t\t$0\n\t\t\t</div>\n\t\t);\n\t}\n}\n\n\n${1:componentName}.propTypes = propTypes;\n\n\nexport default ${1:componentName};\n",
     "description": "Creates a React component class with PropTypes and ES6 module system"
   },
   "reactClassComponentWithMethods": {
