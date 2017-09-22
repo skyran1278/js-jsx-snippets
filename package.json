@@ -1,12 +1,16 @@
 {
   "name": "js-jsx-snippets",
-  "displayName": "js-jsx-snippets",
+  "displayName": "Js Jsx Snippets",
   "description": "Simple extensions for React, Redux in JS with babel and ES6 syntax",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "publisher": "skyran",
   "icon": "images/react-logo.png",
   "galleryBanner": {
     "theme": "light"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/skyran1278/js-jsx-snippets"
   },
   "engines": {
     "vscode": "^1.16.0"

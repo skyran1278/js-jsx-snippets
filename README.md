@@ -1,4 +1,4 @@
-# js-jsx-snippets
+# Js Jsx Snippets
 
 ## Supported languages (file extensions)
 * JavaScript (.js)
@@ -6,21 +6,7 @@
 * JavaScript React (.jsx)
 * TypeScript React (.tsx)
 
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 0.0.1
-
-Initial release of js-jsx-snippets
-
-### 0.0.2
-
-modify snippets
-
-### 0.0.3
-
-update readme
+---
 
 ## Snippets
 
@@ -141,3 +127,25 @@ console.log(object);
 | `ptoor→` | `PropTypes.objectOf(PropTypes.number).isRequired,` |
 | `ptsh→`  | `PropTypes.shape({color: PropTypes.string, fontSize: PropTypes.number}),` |
 | `ptshr→` | `PropTypes.shape({color: PropTypes.string, fontSize: PropTypes.number}).isRequired,` |
+
+---
+
+## Release Notes
+
+Users appreciate release notes as you update your extension.
+
+### 0.0.1
+
+Initial release of js-jsx-snippets
+
+### 0.0.2
+
+modify snippets
+
+### 0.0.3
+
+update readme
+
+### 0.0.4
+
+update readme and snippets name
