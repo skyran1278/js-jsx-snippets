@@ -6,12 +6,14 @@
 * JavaScript React (.jsx)
 * TypeScript React (.tsx)
 
----
+## Usage
+After install this snippets add this inside your settings
+
+```js
+"editor.snippetSuggestions": "top",
+```
 
 ## Snippets
-
----
-
 ### imp [import]
 
 ```js
@@ -66,7 +68,6 @@ console.log(object);
 // eslint-disable-line
 ```
 
----
 
 | Trigger  | Content |
 | -------: | ------- |
@@ -94,8 +95,6 @@ console.log(object);
 | `props→` | `this.props` |
 | `state→` | `this.state` |
 | `bnd→`   | `binds the this of method inside the constructor` |
-
----
 
 | Trigger  | Content |
 | -------: | ------- |
@@ -128,7 +127,6 @@ console.log(object);
 | `ptsh→`  | `PropTypes.shape({color: PropTypes.string, fontSize: PropTypes.number}),` |
 | `ptshr→` | `PropTypes.shape({color: PropTypes.string, fontSize: PropTypes.number}).isRequired,` |
 
----
 
 ## Release Notes
 
@@ -149,3 +147,7 @@ update readme
 ### 0.0.4
 
 update readme and snippets name
+
+### 0.0.5
+
+update readme description
