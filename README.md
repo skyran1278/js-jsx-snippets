@@ -151,3 +151,7 @@ update readme and snippets name
 ### 0.0.5
 
 update readme description
+
+### 0.0.6
+
+fix small bugs
