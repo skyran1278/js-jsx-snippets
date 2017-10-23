@@ -1,15 +1,15 @@
 {
   "import": {
     "prefix": "imp",
-    "body": "import ${2:moduleName} from '${1:module}'$0;"
+    "body": "import ${2:moduleName} from '${1:module}';"
   },
   "importNoModuleName": {
     "prefix": "imn",
-    "body": "import '${1:module}'$0;"
+    "body": "import '${1:module}';"
   },
   "importDestructing": {
     "prefix": "imd",
-    "body": "import { $2 } from '${1:module}'$0;"
+    "body": "import { $2 } from '${1:module}';"
   },
   "import React, { Component }": {
     "prefix": "imrc",
@@ -31,7 +31,22 @@
   },
   "reactClassComponent": {
     "prefix": "rcc",
-    "body": "import React, { Component } from 'react';\n\nclass ${1:componentName} extends Component {\n\trender() {\n\t\treturn (\n\t\t\t<div>\n\t\t\t\t$0\n\t\t\t</div>\n\t\t);\n\t}\n}\n\nexport default ${1:componentName};\n",
+    "body": [
+      "import React, { Component } from 'react';",
+      "",
+      "class ${1:componentName} extends Component {",
+      "\trender() {",
+      "\t\treturn (",
+      "\t\t\t<div>",
+      "\t\t\t\t$0",
+      "\t\t\t</div>",
+      "\t\t);",
+      "\t}",
+      "}",
+      "",
+      "export default ${1:componentName};",
+      ""
+    ],
     "description": "Creates a React component class with ES6 module system"
   },
   "reactJustClassComponent": {
