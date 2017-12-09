@@ -17,7 +17,7 @@ After install this snippets add this inside your settings
 ### imp [import]
 
 ```js
-import moduleName from 'module';
+import name from 'module';
 ```
 
 ---
@@ -57,15 +57,15 @@ import { connect } from 'react-redux';
 ### clg [consoleLog]
 
 ```js
-console.log(object);
+console.log()
 ```
 
 ---
 
-### edl [EslintDisableLine]
+### edl [EslintDisableNextLine]
 
 ```js
-// eslint-disable-line
+// eslint-disable-next-line
 ```
 
 
@@ -155,3 +155,13 @@ update readme description
 ### 0.0.6
 
 fix small bugs
+
+### 0.0.7
+
+Add and improve syntax:
+- imp
+- router
+- clg
+- edl
+- rscp
+- sst

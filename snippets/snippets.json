@@ -1,7 +1,7 @@
 {
   "import": {
     "prefix": "imp",
-    "body": "import ${2:moduleName} from '${1:module}';"
+    "body": "import ${2:name} from '${1:module}';"
   },
   "importNoModuleName": {
     "prefix": "imn",
@@ -19,29 +19,35 @@
     "prefix": "redux",
     "body": "import { connect } from 'react-redux';"
   },
+  "import router statement": {
+    "prefix": "router",
+    "body": "import { $1 } from 'react-router-dom';"
+  },
   "consoleLog": {
     "prefix": "clg",
-    "body": "console.log(${1:object});",
+    "body": "console.log($1)",
     "description": "Displays a message in the console"
   },
   "EslintDisableLine": {
     "prefix": "edl",
-    "body": "// eslint-disable-line",
+    "body": "// eslint-disable-next-line $0",
     "description": "Eslint Disable Line"
   },
+  // ------------------------------------------------------------------
+  // react
   "reactClassComponent": {
     "prefix": "rcc",
     "body": [
       "import React, { Component } from 'react';",
       "",
       "class ${1:componentName} extends Component {",
-      "\trender() {",
-      "\t\treturn (",
-      "\t\t\t<div>",
-      "\t\t\t\t$0",
-      "\t\t\t</div>",
-      "\t\t);",
-      "\t}",
+      "  render() {",
+      "    return (",
+      "      <div>",
+      "        $0",
+      "      </div>",
+      "    );",
+      "  }",
       "}",
       "",
       "export default ${1:componentName};",
@@ -76,7 +82,31 @@
   },
   "reactStatelessProps": {
     "prefix": "rscp",
-    "body": "import React from 'react';\nimport PropTypes from 'prop-types';\n\n\nconst propTypes = {\n\t$0\n};\n\n\nconst ${1:componentName} = () => (\n\t<div>\n\t\t$0\n\t</div>\n);\n\n\n${1:componentName}.propTypes = propTypes;\n\n\nexport default ${1:componentName};\n",
+    "body": [
+      "import React from 'react';",
+      "import PropTypes from 'prop-types';",
+      "",
+      "",
+      "const propTypes = {",
+      "  $0",
+      "};",
+      "",
+      "",
+      "const ${1:componentName} = () => {",
+      "  return (",
+      "    <div>",
+      "      $2",
+      "    </div>",
+      "  );",
+      "};",
+      "",
+      "",
+      "${1:componentName}.propTypes = propTypes;",
+      "",
+      "",
+      "export default ${1:componentName};",
+      ""
+    ],
     "description": "Creates a stateless React component with PropTypes and ES6 module system"
   },
   "classConstructor": {
@@ -136,7 +166,7 @@
   },
   "componentSetStateObject": {
     "prefix": "sst",
-    "body": "this.setState($0);",
+    "body": "this.setState($1)",
     "description": "Performs a shallow merge of nextState into current state"
   },
   "componentSetStateFunc": {
