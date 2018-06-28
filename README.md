@@ -25,13 +25,6 @@ After install this snippets add this inside your settings
 | `mde`  | `module.exports = { };` |
 | `edm`  | `export default moduleName;` |
 
-## Basic methods
-| Trigger  | Content |
-| -------: | ------- |
-| `cm`   | Comment Block |
-| `clg`   | `console.log()` |
-| `edl`   | `// eslint-disable-next-line` |
-
 ## Import package
 | Trigger  | Content |
 | -------: | ------- |
@@ -41,6 +34,12 @@ After install this snippets add this inside your settings
 | `ipt`   | `import PropTypes from 'prop-types';` |
 | `redux`   | `import { connect } from 'react-redux';` |
 
+## Basic methods
+| Trigger  | Content |
+| -------: | ------- |
+| `cm`   | Comment Block |
+| `clg`   | `console.log()` |
+| `edl`   | `// eslint-disable-next-line` |
 
 | Trigger  | Content |
 | -------: | ------- |
