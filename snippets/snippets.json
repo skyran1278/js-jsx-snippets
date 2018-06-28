@@ -1,15 +1,38 @@
 {
   "import": {
     "prefix": "imp",
-    "body": "import ${2:name} from '${1:module}';"
+    "body": "import ${2:name} from '${1:module}';",
+    "description": "Imports entire module statement in ES6 syntax"
   },
   "importNoModuleName": {
     "prefix": "imn",
-    "body": "import '$1';"
+    "body": "import '$1';",
+    "description": "Imports entire module in ES6 syntax without module name"
   },
   "importDestructing": {
     "prefix": "imd",
-    "body": "import { $2 } from '${1:module}';"
+    "body": "import { $2 } from '${1:module}';",
+    "description": "Imports only a portion of the module in ES6 syntax"
+  },
+  "require": {
+    "prefix": "rqr",
+    "body": "require('${1:package}');",
+    "description": "Require a package"
+  },
+  "moduleExports": {
+    "prefix": "mde",
+    "body": [
+      "module.exports = {",
+      "\t$0",
+      "};",
+      ""
+    ],
+    "description": "Module exports from Common JS, node syntax at ES6"
+  },
+  "exportDefaultModule": {
+    "prefix": "edm",
+    "body": "export default ${1:moduleName};",
+    "description": "Export default module in ES6 syntax"
   },
   "import React, { Component }": {
     "prefix": "imrc",

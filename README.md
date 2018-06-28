@@ -14,32 +14,19 @@ After install this snippets add this inside your settings
 ```
 
 ## Snippets
-### imp [import]
 
-```js
-import name from 'module';
-```
-
----
-
-### imn [importNoModuleName]
-
-```js
-import 'module';
-```
+## Import and export
+| Trigger  | Content |
+| -------: | ------- |
+| `imp`   | `import name from 'module';` |
+| `imn`  | `import 'module';` |
+| `imd`  | `import {  } from 'module';` |
+| `rqr`  | `require('package');` |
+| `mde`  | `module.exports = { };` |
+| `edm`  | `export default moduleName;` |
 
 ---
-
-### imd [importDestructing]
-
-```js
-import {  } from 'module';
-```
-
----
-
 ### imrc [import React, { Component }]
-
 ```js
 import React, { Component } from 'react';
 ```

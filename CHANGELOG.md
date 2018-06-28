@@ -3,32 +3,25 @@ All notable changes to the "js-jsx-snippets" extension will be documented in thi
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
-## [Unreleased]
-- Initial release
+## [0.1.0] - 2018-06-28
+### Added
+| Trigger  | Content |
+| -------: | ------- |
+| `rqr`  | `require('package');` |
+| `mde`  | `module.exports = { };` |
+| `edm`  | `export default moduleName;` |
 
-## [0.0.1]
 
-Initial release of js-jsx-snippets
+## [0.0.9] - 2018-01-17
+### Changed
+- move change log in README to CHANGELOG'
 
-## [0.0.2]
+## [0.0.8] - 2018-01-16
+### Removed
+- rpt
 
-modify snippets
-
-## [0.0.3]
-
-update readme
-
-## [0.0.4]
-
-update readme and snippets name
-
-## [0.0.5]
-
-update readme description
-
-## [0.0.6]
-
-fix small bugs
+### Changed
+- Improve syntax detail experience
 
 ## [0.0.7]
 
@@ -40,13 +33,26 @@ Add and improve syntax:
 - rscp
 - sst
 
-## [0.0.8] - 2018-01-16
-### Removed
-- rpt
+## [0.0.6]
 
-### Changed
-- Improve syntax detail experience
+fix small bugs
 
-## [0.0.9] - 2018-01-17
-### Changed
-- move change log in README to CHANGELOG
+## [0.0.5]
+
+update readme description
+
+## [0.0.4]
+
+update readme and snippets name
+
+## [0.0.3]
+
+update readme
+
+## [0.0.2]
+
+modify snippets
+
+## [0.0.1]
+
+Initial release of js-jsx-snippets
