@@ -3,6 +3,20 @@ All notable changes to the "js-jsx-snippets" extension will be documented in thi
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [0.2.0] - 2018-06-29
+### Added
+| Trigger  | Content |
+| -------: | ------- |
+| `imr`   | `import React from 'react';` |
+| `imrpc`   | `import React, { PureComponent } from 'react';` |
+| `ipt`   | `import PropTypes from 'prop-types';` |
+| `cm`   | Comment Block |
+
+### Removed
+| Trigger  | Content |
+| -------: | ------- |
+| `router`   | `import {  } from 'react-router-dom';` |
+
 ## [0.1.0] - 2018-06-28
 ### Added
 | Trigger  | Content |
@@ -10,7 +24,6 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 | `rqr`  | `require('package');` |
 | `mde`  | `module.exports = { };` |
 | `edm`  | `export default moduleName;` |
-
 
 ## [0.0.9] - 2018-01-17
 ### Changed

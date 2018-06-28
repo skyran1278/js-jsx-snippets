@@ -34,17 +34,42 @@
     "body": "export default ${1:moduleName};",
     "description": "Export default module in ES6 syntax"
   },
+  "Import react": {
+    "prefix": "imr",
+    "body": [
+      "import React from 'react';"
+    ],
+    "description": "Import react"
+  },
   "import React, { Component }": {
     "prefix": "imrc",
     "body": "import React, { Component } from 'react';"
+  },
+  "Import react pure component": {
+    "prefix": "imrpc",
+    "body": [
+      "import React, { PureComponent } from 'react';"
+    ],
+    "description": "Import react PureComponent"
+  },
+  "Import PropTypes": {
+    "prefix": "ipt",
+    "body": [
+      "import PropTypes from 'prop-types';"
+    ],
+    "description": "Import PropTypes"
   },
   "import redux statement": {
     "prefix": "redux",
     "body": "import { connect } from 'react-redux';"
   },
-  "import router statement": {
-    "prefix": "router",
-    "body": "import { $1 } from 'react-router-dom';"
+  "Comment Block": {
+    "prefix": "cm",
+    "body": [
+      "/**",
+      " * ${1}",
+      " */"
+    ]
   },
   "consoleLog": {
     "prefix": "clg",
