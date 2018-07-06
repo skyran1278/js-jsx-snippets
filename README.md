@@ -41,15 +41,18 @@ After install this snippets add this inside your settings
 | `clg`   | `console.log()` |
 | `edl`   | `// eslint-disable-next-line` |
 
+## React components
 | Trigger  | Content |
 | -------: | ------- |
 | `rcc`   | class component skeleton |
 | `rccp`  | class component skeleton with prop types after the class |
 | `rcjc`  | class component skeleton without import and default export lines |
-| `rcfc`  | class component skeleton that contains all the lifecycle methods |
 | `rwwd`  | class component without import statements |
+| `rpc`   | class pure component skeleton with prop types after the class |
 | `rsc`   | stateless component skeleton |
 | `rscp`  | stateless component with prop types skeleton |
+| `rpt`   | empty propTypes declaration |
+| `rdp`   | empty defaultProps declaration |
 | `con`   | class default constructor with props|
 | `conc`  | class default constructor with props and context |
 | `est`   | empty state object |
@@ -60,6 +63,9 @@ After install this snippets add this inside your settings
 | `cwup`  | `componentWillUpdate method` |
 | `cdup`  | `componentDidUpdate method` |
 | `cwun`  | `componentWillUnmount method` |
+| `gsbu`   | `getSnapshotBeforeUpdate method` |
+| `gdsfp`   | `static getDerivedStateFromProps method` |
+| `cdc`   | `componentDidCatch method` |
 | `ren`   | `render method` |
 | `sst`   | `this.setState with object as parameter` |
 | `ssf`   | `this.setState with function as parameter` |
@@ -67,6 +73,8 @@ After install this snippets add this inside your settings
 | `state` | `this.state` |
 | `bnd`   | `binds the this of method inside the constructor` |
 
+
+## PropTypes
 | Trigger  | Content |
 | -------: | ------- |
 | `pta`   | `PropTypes.array,` |
