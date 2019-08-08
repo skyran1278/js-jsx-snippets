@@ -86,7 +86,7 @@
     "body": [
       "import React, { Component } from 'react';",
       "",
-      "class ${1:TM_FILENAME_BASE} extends Component {",
+      "class ${1:$TM_FILENAME_BASE} extends Component {",
       "\trender() {",
       "\t\treturn (",
       "\t\t\t<div>",
@@ -96,7 +96,7 @@
       "\t}",
       "}",
       "",
-      "export default ${1:TM_FILENAME_BASE};",
+      "export default ${1:$TM_FILENAME_BASE};",
       ""
     ],
     "description": "Creates a React component class with ES6 module system"
@@ -104,7 +104,7 @@
   "reactJustClassComponent": {
     "prefix": "rcjc",
     "body": [
-      "class ${1:TM_FILENAME_BASE} extends Component {",
+      "class ${1:$TM_FILENAME_BASE} extends Component {",
       "\trender() {",
       "\t\treturn (",
       "\t\t\t<div>",
@@ -129,7 +129,7 @@
       "};",
       "",
       "",
-      "class ${1:TM_FILENAME_BASE} extends Component {",
+      "class ${1:$TM_FILENAME_BASE} extends Component {",
       "\trender() {",
       "\t\treturn (",
       "\t\t\t<div>",
@@ -140,10 +140,10 @@
       "}",
       "",
       "",
-      "${1:TM_FILENAME_BASE}.propTypes = propTypes;",
+      "${1:$TM_FILENAME_BASE}.propTypes = propTypes;",
       "",
       "",
-      "export default ${1:TM_FILENAME_BASE};",
+      "export default ${1:$TM_FILENAME_BASE};",
       ""
     ],
     "description": "Creates a React component class with PropTypes and ES6 module system"
@@ -151,7 +151,7 @@
   "reactWithWebpackDefaults": {
     "prefix": "rwwd",
     "body": [
-      "class ${1:TM_FILENAME_BASE} extends Component {",
+      "class ${1:$TM_FILENAME_BASE} extends Component {",
       "\tconstructor(props) {",
       "\t\tsuper(props);",
       "",
@@ -168,11 +168,11 @@
       "\t}",
       "}",
       "",
-      "${1:TM_FILENAME_BASE}.propTypes = {",
+      "${1:$TM_FILENAME_BASE}.propTypes = {",
       "",
       "};",
       "",
-      "export default ${1:TM_FILENAME_BASE};"
+      "export default ${1:$TM_FILENAME_BASE};"
     ],
     "description": "Creates a React component class with constructor, empty state, proptypes and export in ES6 module system without imports. (Mostly used when React, Proptypes are provided by webpack provide plugin)"
   },
@@ -188,7 +188,7 @@
       "};",
       "",
       "",
-      "class ${1:TM_FILENAME_BASE} extends PureComponent {",
+      "class ${1:$TM_FILENAME_BASE} extends PureComponent {",
       "\trender() {",
       "\t\treturn (",
       "\t\t\t<div>",
@@ -199,10 +199,10 @@
       "}",
       "",
       "",
-      "${1:TM_FILENAME_BASE}.propTypes = propTypes;",
+      "${1:$TM_FILENAME_BASE}.propTypes = propTypes;",
       "",
       "",
-      "export default ${1:TM_FILENAME_BASE};",
+      "export default ${1:$TM_FILENAME_BASE};",
       ""
     ],
     "description": "Creates a React pure component class with PropTypes and ES6 module system"
@@ -212,7 +212,7 @@
     "body": [
       "import React from 'react';",
       "",
-      "const ${1:TM_FILENAME_BASE} = () => {",
+      "const ${1:$TM_FILENAME_BASE} = () => {",
       "\treturn (",
       "\t\t<div>",
       "\t\t\t$0",
@@ -220,7 +220,7 @@
       "\t);",
       "}",
       "",
-      "export default ${1:TM_FILENAME_BASE};",
+      "export default ${1:$TM_FILENAME_BASE};",
       ""
     ],
     "description": "Creates a stateless React component without PropTypes and ES6 module system"
@@ -237,7 +237,7 @@
       "};",
       "",
       "",
-      "const ${1:TM_FILENAME_BASE} = () => {",
+      "const ${1:$TM_FILENAME_BASE} = () => {",
       "\treturn (",
       "\t\t<div>",
       "\t\t\t$2",
@@ -246,10 +246,10 @@
       "};",
       "",
       "",
-      "${1:TM_FILENAME_BASE}.propTypes = propTypes;",
+      "${1:$TM_FILENAME_BASE}.propTypes = propTypes;",
       "",
       "",
-      "export default ${1:TM_FILENAME_BASE};",
+      "export default ${1:$TM_FILENAME_BASE};",
       ""
     ],
     "description": "Creates a stateless React component with PropTypes and ES6 module system"
