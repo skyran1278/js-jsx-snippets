@@ -3,6 +3,37 @@ All notable changes to the "js-jsx-snippets" extension will be documented in thi
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [0.4.0] - 2019-08-08
+### Added
+| Trigger  | Content |
+| -------: | ------- |
+| `imrs`   | `import React, { useState } from 'react';` |
+| `imre`   | `import React, { useEffect } from 'react';` |
+| `useState`   | useState block |
+| `useEffect`   | useEffect block |
+| `useContext`   | useContext block |
+| `describe`   | describe Block |
+| `test`   | test Block |
+| `tit`   | it Block |
+### Changed
+| Trigger  | Content |
+| -------: | ------- |
+| `exp`   | Export default module in ES6 syntax |
+| `comment`   | Comment Block |
+| `rfc`   | arrow function component skeleton |
+| `rfcp`   | arrow function component with prop types skeleton |
+
+### Fixed
+- Add dollar sign to TM_FILENAME_BASE variable
+### Removed
+| Trigger  | Content |
+| -------: | ------- |
+| `edl`  | `// eslint-disable-next-line` |
+| `rwwd`  | class component without import statements |
+| `cwm`   | `componentWillMount method` |
+| `cwr`   | `componentWillReceiveProps method` |
+| `cwup`  | `componentWillUpdate method` |
+
 ## [0.3.0] - 2018-07-06
 ### Added
 | Trigger  | Content |

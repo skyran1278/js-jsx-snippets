@@ -30,7 +30,7 @@
     "description": "Module exports from Common JS, node syntax at ES6"
   },
   "exportDefaultModule": {
-    "prefix": "edm",
+    "prefix": "exp",
     "body": "export default ${1:moduleName};",
     "description": "Export default module in ES6 syntax"
   },
@@ -52,6 +52,20 @@
     ],
     "description": "Import react PureComponent"
   },
+  "import React, { useState }": {
+    "prefix": "imrs",
+    "body": [
+      "import React, { useState } from 'react';",
+      ""
+    ]
+  },
+  "import React, { useEffect }": {
+    "prefix": "imre",
+    "body": [
+      "import React, { useEffect } from 'react';",
+      ""
+    ]
+  },
   "Import PropTypes": {
     "prefix": "ipt",
     "body": [
@@ -64,7 +78,7 @@
     "body": "import { connect } from 'react-redux';"
   },
   "Comment Block": {
-    "prefix": "cm",
+    "prefix": "comment",
     "body": [
       "/**",
       " * ${1}",
@@ -75,11 +89,6 @@
     "prefix": "clg",
     "body": "console.log($1)",
     "description": "Displays a message in the console"
-  },
-  "EslintDisableLine": {
-    "prefix": "edl",
-    "body": "// eslint-disable-next-line",
-    "description": "Eslint Disable Line"
   },
   "reactClassComponent": {
     "prefix": "rcc",
@@ -148,34 +157,6 @@
     ],
     "description": "Creates a React component class with PropTypes and ES6 module system"
   },
-  "reactWithWebpackDefaults": {
-    "prefix": "rwwd",
-    "body": [
-      "class ${1:$TM_FILENAME_BASE} extends Component {",
-      "\tconstructor(props) {",
-      "\t\tsuper(props);",
-      "",
-      "\t\tthis.state = {};",
-      "",
-      "\t}",
-      "",
-      "\trender() {",
-      "\t\treturn(",
-      "\t\t\t<div>",
-      "",
-      "\t\t\t$0</div>",
-      "\t\t);",
-      "\t}",
-      "}",
-      "",
-      "${1:$TM_FILENAME_BASE}.propTypes = {",
-      "",
-      "};",
-      "",
-      "export default ${1:$TM_FILENAME_BASE};"
-    ],
-    "description": "Creates a React component class with constructor, empty state, proptypes and export in ES6 module system without imports. (Mostly used when React, Proptypes are provided by webpack provide plugin)"
-  },
   "reactPureComponent": {
     "prefix": "rpc",
     "body": [
@@ -207,8 +188,8 @@
     ],
     "description": "Creates a React pure component class with PropTypes and ES6 module system"
   },
-  "reactStateless": {
-    "prefix": "rsc",
+  "reactFunction": {
+    "prefix": "rfc",
     "body": [
       "import React from 'react';",
       "",
@@ -223,10 +204,10 @@
       "export default ${1:$TM_FILENAME_BASE};",
       ""
     ],
-    "description": "Creates a stateless React component without PropTypes and ES6 module system"
+    "description": "Creates a React Arrow Function component without PropTypes and ES6 module system"
   },
-  "reactStatelessProps": {
-    "prefix": "rscp",
+  "reactFunctionProps": {
+    "prefix": "rfcp",
     "body": [
       "import React from 'react';",
       "import PropTypes from 'prop-types';",
@@ -252,7 +233,7 @@
       "export default ${1:$TM_FILENAME_BASE};",
       ""
     ],
-    "description": "Creates a stateless React component with PropTypes and ES6 module system"
+    "description": "Creates a React Arrow Function component with PropTypes and ES6 module system"
   },
   "classConstructor": {
     "prefix": "con",
@@ -285,17 +266,6 @@
     ],
     "description": "Creates empty state object. To be used in a constructor."
   },
-  "componentWillMount": {
-    "prefix": "cwm",
-    "body": [
-      "",
-      "componentWillMount() {",
-      "\t$1",
-      "}",
-      ""
-    ],
-    "description": "Invoked once, both on the client and server, immediately before the initial rendering occurs"
-  },
   "componentDidMount": {
     "prefix": "cdm",
     "body": [
@@ -306,16 +276,6 @@
     ],
     "description": "Invoked once, only on the client (not on the server), immediately after the initial rendering occurs."
   },
-  "componentWillReceiveProps": {
-    "prefix": "cwr",
-    "body": [
-      "componentWillReceiveProps(nextProps) {",
-      "\t$1",
-      "}",
-      ""
-    ],
-    "description": "Invoked when a component is receiving new props. This method is not called for the initial render."
-  },
   "shouldComponentUpdate": {
     "prefix": "scu",
     "body": [
@@ -325,16 +285,6 @@
       ""
     ],
     "description": "Invoked before rendering when new props or state are being received. "
-  },
-  "componentWillUpdate": {
-    "prefix": "cwup",
-    "body": [
-      "componentWillUpdate(nextProps, nextState) {",
-      "\t$1",
-      "}",
-      ""
-    ],
-    "description": "Invoked immediately before rendering when new props or state are being received."
   },
   "componentDidUpdate": {
     "prefix": "cdup",
@@ -600,5 +550,58 @@
       "}).isRequired,"
     ],
     "description": "An object taking on a particular shape required"
+  },
+  "describeBlock": {
+    "prefix": "describe",
+    "body": [
+      "describe('$1', () => {",
+      "\t$0",
+      "});",
+      ""
+    ],
+    "description": "Testing `describe` block"
+  },
+  "testBlock": {
+    "prefix": "test",
+    "body": [
+      "test('should $1', () => {",
+      "\t$0",
+      "});",
+      ""
+    ],
+    "description": "Testing `test` block"
+  },
+  "itBlock": {
+    "prefix": "tit",
+    "body": [
+      "it('should $1', () => {",
+      "\t$0",
+      "});",
+      ""
+    ],
+    "description": "Testing `it` block"
+  },
+  "useState": {
+    "prefix": "useState",
+    "body": [
+      "const [${1:state}, set${1/(.*)/${1:/capitalize}/}] = useState(${2:initialState});"
+    ]
+  },
+  "useEffect": {
+    "prefix": "useEffect",
+    "body": [
+      "useEffect(() => {",
+      "\t${1:effect}",
+      "\treturn () => {",
+      "\t\t${2:cleanup}",
+      "\t};",
+      "}, [${3:input}]);"
+    ]
+  },
+  "useContext": {
+    "prefix": "useContext",
+    "body": [
+      "const ${1:context} = useContext(${2:contextValue});"
+    ]
   }
 }

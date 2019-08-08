@@ -23,7 +23,7 @@ After install this snippets add this inside your settings
 | `imd`  | `import {  } from 'module';` |
 | `rqr`  | `require('package');` |
 | `mde`  | `module.exports = { };` |
-| `edm`  | `export default moduleName;` |
+| `exp`  | `export default moduleName;` |
 
 ## Import package
 | Trigger  | Content |
@@ -33,13 +33,14 @@ After install this snippets add this inside your settings
 | `imrpc`   | `import React, { PureComponent } from 'react';` |
 | `ipt`   | `import PropTypes from 'prop-types';` |
 | `redux`   | `import { connect } from 'react-redux';` |
+| `imrs`   | `import React, { useState } from 'react';` |
+| `imre`   | `import React, { useEffect } from 'react';` |
 
 ## Basic methods
 | Trigger  | Content |
 | -------: | ------- |
-| `cm`   | Comment Block |
+| `comment`   | Comment Block |
 | `clg`   | `console.log()` |
-| `edl`   | `// eslint-disable-next-line` |
 
 ## React components
 | Trigger  | Content |
@@ -47,20 +48,16 @@ After install this snippets add this inside your settings
 | `rcc`   | class component skeleton |
 | `rccp`  | class component skeleton with prop types after the class |
 | `rcjc`  | class component skeleton without import and default export lines |
-| `rwwd`  | class component without import statements |
 | `rpc`   | class pure component skeleton with prop types after the class |
-| `rsc`   | stateless component skeleton |
-| `rscp`  | stateless component with prop types skeleton |
+| `rfc`   | stateless component skeleton |
+| `rfcp`  | stateless component with prop types skeleton |
 | `rpt`   | empty propTypes declaration |
 | `rdp`   | empty defaultProps declaration |
 | `con`   | class default constructor with props|
 | `conc`  | class default constructor with props and context |
 | `est`   | empty state object |
-| `cwm`   | `componentWillMount method` |
 | `cdm`   | `componentDidMount method` |
-| `cwr`   | `componentWillReceiveProps method` |
 | `scu`   | `shouldComponentUpdate method` |
-| `cwup`  | `componentWillUpdate method` |
 | `cdup`  | `componentDidUpdate method` |
 | `cwun`  | `componentWillUnmount method` |
 | `gsbu`   | `getSnapshotBeforeUpdate method` |
@@ -72,6 +69,16 @@ After install this snippets add this inside your settings
 | `props` | `this.props` |
 | `state` | `this.state` |
 | `bnd`   | `binds the this of method inside the constructor` |
+| `useState`   | useState block |
+| `useEffect`   | useEffect block |
+| `useContext`   | useContext block |
+
+## Jest
+| Trigger  | Content |
+| -------: | ------- |
+| `describe`   | describe Block |
+| `test`   | test Block |
+| `tit`   | it Block |
 
 
 ## PropTypes
