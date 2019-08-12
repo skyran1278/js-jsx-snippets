@@ -11,7 +11,7 @@
   },
   "importDestructing": {
     "prefix": "imd",
-    "body": "import { $2 } from '${1:module}';",
+    "body": "import { $2 } from '${1:module}';$0",
     "description": "Imports only a portion of the module in ES6 syntax"
   },
   "require": {
@@ -37,7 +37,8 @@
   "Import react": {
     "prefix": "imr",
     "body": [
-      "import React from 'react';"
+      "import React from 'react';",
+      ""
     ],
     "description": "Import react"
   },
@@ -95,7 +96,7 @@
     "body": [
       "import React, { Component } from 'react';",
       "",
-      "class ${1:$TM_FILENAME_BASE} extends Component {",
+      "export class ${1:$TM_FILENAME_BASE} extends Component {",
       "\trender() {",
       "\t\treturn (",
       "\t\t\t<div>",
@@ -113,7 +114,7 @@
   "reactJustClassComponent": {
     "prefix": "rcjc",
     "body": [
-      "class ${1:$TM_FILENAME_BASE} extends Component {",
+      "export class ${1:$TM_FILENAME_BASE} extends Component {",
       "\trender() {",
       "\t\treturn (",
       "\t\t\t<div>",
@@ -138,7 +139,7 @@
       "};",
       "",
       "",
-      "class ${1:$TM_FILENAME_BASE} extends Component {",
+      "export class ${1:$TM_FILENAME_BASE} extends Component {",
       "\trender() {",
       "\t\treturn (",
       "\t\t\t<div>",
@@ -572,7 +573,7 @@
     "description": "Testing `test` block"
   },
   "itBlock": {
-    "prefix": "tit",
+    "prefix": "it",
     "body": [
       "it('should $1', () => {",
       "\t$0",

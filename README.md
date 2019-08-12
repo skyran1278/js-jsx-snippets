@@ -78,7 +78,7 @@ After install this snippets add this inside your settings
 | -------: | ------- |
 | `describe`   | describe Block |
 | `test`   | test Block |
-| `tit`   | it Block |
+| `it`   | it Block |
 
 
 ## PropTypes

@@ -3,6 +3,12 @@ All notable changes to the "js-jsx-snippets" extension will be documented in thi
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [0.5.0] - 2019-08-12
+### Changed
+| Trigger  | Content |
+| -------: | ------- |
+| `it`   | it Block |
+
 ## [0.4.0] - 2019-08-08
 ### Added
 | Trigger  | Content |
