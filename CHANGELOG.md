@@ -3,6 +3,22 @@ All notable changes to the "js-jsx-snippets" extension will be documented in thi
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [0.6.0] - 2019-08-13
+### Removed
+| Trigger  | Content |
+| -------: | ------- |
+| `redux`   | `import { connect } from 'react-redux';` |
+| `imn`  | `import 'module';` |
+| `exp`  | `export default moduleName;` |
+| `rqr`  | `require('package');` |
+| `mde`  | `module.exports = { };` |
+| `imrpc`   | `import React, { PureComponent } from 'react';` |
+| `rpc`   | class pure component skeleton with prop types after the class |
+| `rpt`   | empty propTypes declaration |
+| `rdp`   | empty defaultProps declaration |
+| `ren`   | `render method` |
+| `rcjc`  | class component skeleton without import and default export lines |
+
 ## [0.5.0] - 2019-08-12
 ### Changed
 | Trigger  | Content |

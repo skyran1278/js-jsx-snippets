@@ -1,38 +1,13 @@
 {
   "import": {
     "prefix": "imp",
-    "body": "import ${2:name} from '${1:module}';",
+    "body": "import ${2:name} from '${1:module}';$0",
     "description": "Imports entire module statement in ES6 syntax"
-  },
-  "importNoModuleName": {
-    "prefix": "imn",
-    "body": "import '$1';",
-    "description": "Imports entire module in ES6 syntax without module name"
   },
   "importDestructing": {
     "prefix": "imd",
     "body": "import { $2 } from '${1:module}';$0",
     "description": "Imports only a portion of the module in ES6 syntax"
-  },
-  "require": {
-    "prefix": "rqr",
-    "body": "require('${1:package}');",
-    "description": "Require a package"
-  },
-  "moduleExports": {
-    "prefix": "mde",
-    "body": [
-      "module.exports = {",
-      "\t$0",
-      "};",
-      ""
-    ],
-    "description": "Module exports from Common JS, node syntax at ES6"
-  },
-  "exportDefaultModule": {
-    "prefix": "exp",
-    "body": "export default ${1:moduleName};",
-    "description": "Export default module in ES6 syntax"
   },
   "Import react": {
     "prefix": "imr",
@@ -45,13 +20,6 @@
   "import React, { Component }": {
     "prefix": "imrc",
     "body": "import React, { Component } from 'react';"
-  },
-  "Import react pure component": {
-    "prefix": "imrpc",
-    "body": [
-      "import React, { PureComponent } from 'react';"
-    ],
-    "description": "Import react PureComponent"
   },
   "import React, { useState }": {
     "prefix": "imrs",
@@ -73,10 +41,6 @@
       "import PropTypes from 'prop-types';"
     ],
     "description": "Import PropTypes"
-  },
-  "import redux statement": {
-    "prefix": "redux",
-    "body": "import { connect } from 'react-redux';"
   },
   "Comment Block": {
     "prefix": "comment",
@@ -111,22 +75,6 @@
     ],
     "description": "Creates a React component class with ES6 module system"
   },
-  "reactJustClassComponent": {
-    "prefix": "rcjc",
-    "body": [
-      "export class ${1:$TM_FILENAME_BASE} extends Component {",
-      "\trender() {",
-      "\t\treturn (",
-      "\t\t\t<div>",
-      "\t\t\t\t$0",
-      "\t\t\t</div>",
-      "\t\t);",
-      "\t}",
-      "}",
-      ""
-    ],
-    "description": "Creates a React component class with ES6 module system"
-  },
   "reactClassComponentPropTypes": {
     "prefix": "rccp",
     "body": [
@@ -157,37 +105,6 @@
       ""
     ],
     "description": "Creates a React component class with PropTypes and ES6 module system"
-  },
-  "reactPureComponent": {
-    "prefix": "rpc",
-    "body": [
-      "import React, { PureComponent } from 'react';",
-      "import PropTypes from 'prop-types';",
-      "",
-      "",
-      "const propTypes = {",
-      "\t",
-      "};",
-      "",
-      "",
-      "class ${1:$TM_FILENAME_BASE} extends PureComponent {",
-      "\trender() {",
-      "\t\treturn (",
-      "\t\t\t<div>",
-      "\t\t\t\t$0",
-      "\t\t\t</div>",
-      "\t\t);",
-      "\t}",
-      "}",
-      "",
-      "",
-      "${1:$TM_FILENAME_BASE}.propTypes = propTypes;",
-      "",
-      "",
-      "export default ${1:$TM_FILENAME_BASE};",
-      ""
-    ],
-    "description": "Creates a React pure component class with PropTypes and ES6 module system"
   },
   "reactFunction": {
     "prefix": "rfc",
@@ -337,19 +254,6 @@
     ],
     "description": "Error boundaries catch errors during rendering, in lifecycle methods, and in constructors of the whole tree below them."
   },
-  "componentRender": {
-    "prefix": "ren",
-    "body": [
-      "render() {",
-      "\treturn (",
-      "\t\t<div>",
-      "\t\t\t$1",
-      "\t\t</div>",
-      "\t);",
-      "}"
-    ],
-    "description": "When called, it should examine this.props and this.state and return a single child element."
-  },
   "componentSetStateObject": {
     "prefix": "sst",
     "body": "this.setState($1)",
@@ -377,24 +281,6 @@
     "prefix": "bnd",
     "body": "this.$1 = this.$1.bind(this);",
     "description": "Binds the this of a method. To be used inside a constructor"
-  },
-  "propTypes": {
-    "prefix": "rpt",
-    "body": [
-      "$1.propTypes = {",
-      "\t$2",
-      "};"
-    ],
-    "description": "Creates empty propTypes declaration"
-  },
-  "defaultProps": {
-    "prefix": "rdp",
-    "body": [
-      "$1.defaultProps = {",
-      "\t$2",
-      "};"
-    ],
-    "description": "Creates empty defaultProps declaration"
   },
   "propTypeArray": {
     "prefix": "pta",

@@ -19,22 +19,19 @@ After install this snippets add this inside your settings
 | Trigger  | Content |
 | -------: | ------- |
 | `imp`   | `import name from 'module';` |
-| `imn`  | `import 'module';` |
 | `imd`  | `import {  } from 'module';` |
+| `exp`  | `export default moduleName;` |
 | `rqr`  | `require('package');` |
 | `mde`  | `module.exports = { };` |
-| `exp`  | `export default moduleName;` |
 
 ## Import package
 | Trigger  | Content |
 | -------: | ------- |
 | `imr`   | `import React from 'react';` |
 | `imrc`   | `import React, { Component } from 'react';` |
-| `imrpc`   | `import React, { PureComponent } from 'react';` |
-| `ipt`   | `import PropTypes from 'prop-types';` |
-| `redux`   | `import { connect } from 'react-redux';` |
 | `imrs`   | `import React, { useState } from 'react';` |
 | `imre`   | `import React, { useEffect } from 'react';` |
+| `ipt`   | `import PropTypes from 'prop-types';` |
 
 ## Basic methods
 | Trigger  | Content |
@@ -47,12 +44,8 @@ After install this snippets add this inside your settings
 | -------: | ------- |
 | `rcc`   | class component skeleton |
 | `rccp`  | class component skeleton with prop types after the class |
-| `rcjc`  | class component skeleton without import and default export lines |
-| `rpc`   | class pure component skeleton with prop types after the class |
 | `rfc`   | stateless component skeleton |
 | `rfcp`  | stateless component with prop types skeleton |
-| `rpt`   | empty propTypes declaration |
-| `rdp`   | empty defaultProps declaration |
 | `con`   | class default constructor with props|
 | `conc`  | class default constructor with props and context |
 | `est`   | empty state object |
@@ -63,7 +56,6 @@ After install this snippets add this inside your settings
 | `gsbu`   | `getSnapshotBeforeUpdate method` |
 | `gdsfp`   | `static getDerivedStateFromProps method` |
 | `cdc`   | `componentDidCatch method` |
-| `ren`   | `render method` |
 | `sst`   | `this.setState with object as parameter` |
 | `ssf`   | `this.setState with function as parameter` |
 | `props` | `this.props` |
