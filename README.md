@@ -20,9 +20,6 @@ After install this snippets add this inside your settings
 | -------: | ------- |
 | `imp`   | `import name from 'module';` |
 | `imd`  | `import {  } from 'module';` |
-| `exp`  | `export default moduleName;` |
-| `rqr`  | `require('package');` |
-| `mde`  | `module.exports = { };` |
 
 ## Import package
 | Trigger  | Content |
