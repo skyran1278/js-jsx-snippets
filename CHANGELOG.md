@@ -3,6 +3,19 @@ All notable changes to the "js-jsx-snippets" extension will be documented in thi
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [0.7.0] - 2019-09-05
+### Removed
+| Trigger  | Content |
+| -------: | ------- |
+| `imr`   | `import React from 'react';` |
+| `imrc`   | `import React, { Component } from 'react';` |
+| `imrs`   | `import React, { useState } from 'react';` |
+| `imre`   | `import React, { useEffect } from 'react';` |
+| `ipt`   | `import PropTypes from 'prop-types';` |
+| `conc`  | class default constructor with props and context |
+| `pto`   | `PropTypes.object.,` |
+| `ptor`  | `PropTypes.object.isRequired,` |
+
 ## [0.6.0] - 2019-08-13
 ### Removed
 | Trigger  | Content |
