@@ -21,6 +21,11 @@ After install this snippets add this inside your settings
 | `imp`   | `import name from 'module';` |
 | `imd`  | `import {  } from 'module';` |
 
+## Import package
+| Trigger  | Content | Description |
+| -------: | ------- | ------- |
+| `imr`   | `import React from 'react';` | useful in test |
+
 ## Basic methods
 | Trigger  | Content |
 | -------: | ------- |
@@ -28,12 +33,13 @@ After install this snippets add this inside your settings
 | `clg`   | `console.log();` |
 
 ## React components
+Only contain class component and function component.
 | Trigger  | Content |
 | -------: | ------- |
 | `rcc`   | class component skeleton |
 | `rccp`  | class component skeleton with prop types after the class |
-| `rfc`   | stateless component skeleton |
-| `rfcp`  | stateless component with prop types skeleton |
+| `rfc`   | function component skeleton |
+| `rfcp`  | function component with prop types skeleton |
 | `con`   | class default constructor with props|
 | `est`   | empty state object |
 | `cdm`   | `componentDidMount method` |
@@ -61,6 +67,8 @@ After install this snippets add this inside your settings
 
 
 ## PropTypes
+Remove `PropTypes.object.isRequired,`, because EsLint not allowed.
+
 | Trigger  | Content |
 | -------: | ------- |
 | `pta`   | `PropTypes.array,` |

@@ -3,6 +3,12 @@ All notable changes to the "js-jsx-snippets" extension will be documented in thi
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [0.8.0] - 2019-09-05
+### Added
+| Trigger  | Content |
+| -------: | ------- |
+| `imr`   | `import React from 'react';` |
+
 ## [0.7.0] - 2019-09-05
 ### Removed
 | Trigger  | Content |

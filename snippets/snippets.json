@@ -9,6 +9,14 @@
     "body": "import { $2 } from '${1:module}';$0",
     "description": "Imports only a portion of the module in ES6 syntax"
   },
+  "Import react": {
+    "prefix": "imr",
+    "body": [
+      "import React from 'react';",
+      ""
+    ],
+    "description": "Import react"
+  },
   "Comment Block": {
     "prefix": "comment",
     "body": [
@@ -392,9 +400,9 @@
     "prefix": "test",
     "body": [
       "test('should $1', () => {",
-      "\t$0",
+      "\t$2",
       "});",
-      ""
+      "$0"
     ],
     "description": "Testing `test` block"
   },
@@ -402,9 +410,9 @@
     "prefix": "it",
     "body": [
       "it('should $1', () => {",
-      "\t$0",
+      "\t$2",
       "});",
-      ""
+      "$0"
     ],
     "description": "Testing `it` block"
   },
