@@ -250,6 +250,16 @@
     "body": "PropTypes.array.isRequired,",
     "description": "Array prop type required"
   },
+  "propTypeObject": {
+    "prefix": "pto",
+    "body": "PropTypes.object,",
+    "description": "Object prop type"
+  },
+  "propTypeObjectRequired": {
+    "prefix": "ptor",
+    "body": "PropTypes.object.isRequired,",
+    "description": "Object prop type required"
+  },
   "propTypeBool": {
     "prefix": "ptb",
     "body": "PropTypes.bool,",

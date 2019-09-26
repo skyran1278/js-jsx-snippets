@@ -73,6 +73,8 @@ Remove `PropTypes.object.isRequired,`, because EsLint not allowed.
 | -------: | ------- |
 | `pta`   | `PropTypes.array,` |
 | `ptar`  | `PropTypes.array.isRequired,` |
+| `pto`   | `PropTypes.object.,` |
+| `ptor`  | `PropTypes.object.isRequired,` |
 | `ptb`   | `PropTypes.bool,` |
 | `ptbr`  | `PropTypes.bool.isRequired,` |
 | `ptf`   | `PropTypes.func,` |

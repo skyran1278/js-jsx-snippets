@@ -3,6 +3,13 @@ All notable changes to the "js-jsx-snippets" extension will be documented in thi
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [0.9.0] - 2019-09-26
+### Added
+| Trigger  | Content |
+| -------: | ------- |
+| `pto`   | `PropTypes.object.,` |
+| `ptor`  | `PropTypes.object.isRequired,` |
+
 ## [0.8.0] - 2019-09-05
 ### Added
 | Trigger  | Content |
