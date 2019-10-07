@@ -29,11 +29,12 @@ After install this snippets add this inside your settings
 ## Basic methods
 | Trigger  | Content |
 | -------: | ------- |
-| `comment`   | Comment Block |
+| `com`   | Comment Block |
 | `clg`   | `console.log();` |
 
 ## React components
 Only contain class component and function component.
+
 | Trigger  | Content |
 | -------: | ------- |
 | `rcc`   | class component skeleton |
@@ -67,8 +68,6 @@ Only contain class component and function component.
 
 
 ## PropTypes
-Remove `PropTypes.object.isRequired,`, because EsLint not allowed.
-
 | Trigger  | Content |
 | -------: | ------- |
 | `pta`   | `PropTypes.array,` |

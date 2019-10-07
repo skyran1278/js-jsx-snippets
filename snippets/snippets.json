@@ -18,7 +18,7 @@
     "description": "Import react"
   },
   "Comment Block": {
-    "prefix": "comment",
+    "prefix": "com",
     "body": [
       "/**",
       " * ${1}",
