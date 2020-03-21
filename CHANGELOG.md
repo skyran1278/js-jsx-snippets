@@ -3,6 +3,22 @@ All notable changes to the "js-jsx-snippets" extension will be documented in thi
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [10.1.0] - 2020-03-21
+### Added
+| Trigger  | Content |
+| -------: | ------- |
+| `ipt`   | `import PropTypes from 'prop-types';` |
+### Changed
+| Trigger  | Content |
+| -------: | ------- |
+| `clg`   | `console.log()` |
+| `rcc`   | class component skeleton |
+| `rccp`  | class component skeleton with prop types after the class |
+| `rfc`   | function component skeleton |
+| `rfcp`  | function component with prop types skeleton |
+| `test`   | test Block |
+| `it`   | it Block |
+
 ## [10.0.0] - 2019-09-26
 ### Changed
 | Trigger  | Content |

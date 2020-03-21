@@ -1,21 +1,24 @@
 {
   "import": {
     "prefix": "imp",
-    "body": "import ${2:name} from '${1:module}';$0",
-    "description": "Imports entire module statement in ES6 syntax"
+    "body": "import ${2:name} from '${1:module}';$0"
   },
   "importDestructing": {
     "prefix": "imd",
-    "body": "import { $2 } from '${1:module}';$0",
-    "description": "Imports only a portion of the module in ES6 syntax"
+    "body": "import { $2 } from '${1:module}';$0"
   },
   "Import react": {
     "prefix": "imr",
     "body": [
       "import React from 'react';",
       ""
-    ],
-    "description": "Import react"
+    ]
+  },
+  "Import PropTypes": {
+    "prefix": "ipt",
+    "body": [
+      "import PropTypes from 'prop-types';"
+    ]
   },
   "Comment Block": {
     "prefix": "com",
@@ -27,28 +30,26 @@
   },
   "consoleLog": {
     "prefix": "clg",
-    "body": "console.log($1);",
-    "description": "Displays a message in the console"
+    "body": "console.log($1)$0"
   },
   "reactClassComponent": {
     "prefix": "rcc",
     "body": [
       "import React, { Component } from 'react';",
       "",
-      "export class ${1:$TM_FILENAME_BASE} extends Component {",
+      "class $TM_FILENAME_BASE extends Component {",
       "\trender() {",
       "\t\treturn (",
       "\t\t\t<div>",
-      "\t\t\t\t$0",
+      "\t\t\t\t$1",
       "\t\t\t</div>",
       "\t\t);",
       "\t}",
       "}",
       "",
-      "export default ${1:$TM_FILENAME_BASE};",
+      "export default $TM_FILENAME_BASE;",
       ""
-    ],
-    "description": "Creates a React component class with ES6 module system"
+    ]
   },
   "reactClassComponentPropTypes": {
     "prefix": "rccp",
@@ -57,44 +58,42 @@
       "import PropTypes from 'prop-types';",
       "",
       "",
-      "class ${1:$TM_FILENAME_BASE} extends Component {",
+      "class $TM_FILENAME_BASE extends Component {",
       "\trender() {",
       "\t\treturn (",
       "\t\t\t<div>",
-      "\t\t\t\t$0",
+      "\t\t\t\t$1",
       "\t\t\t</div>",
       "\t\t);",
       "\t}",
       "}",
       "",
       "",
-      "${1:$TM_FILENAME_BASE}.propTypes = {",
-      "\t",
+      "$TM_FILENAME_BASE.propTypes = {",
+      "$0",
       "};",
       "",
       "",
-      "export default ${1:$TM_FILENAME_BASE};",
+      "export default $TM_FILENAME_BASE;",
       ""
-    ],
-    "description": "Creates a React component class with PropTypes and ES6 module system"
+    ]
   },
   "reactFunction": {
     "prefix": "rfc",
     "body": [
       "import React from 'react';",
       "",
-      "const ${1:$TM_FILENAME_BASE} = () => {",
+      "const $TM_FILENAME_BASE = () => {",
       "\treturn (",
       "\t\t<div>",
-      "\t\t\t$0",
+      "\t\t\t$1",
       "\t\t</div>",
       "\t);",
       "}",
       "",
-      "export default ${1:$TM_FILENAME_BASE};",
+      "export default $TM_FILENAME_BASE;",
       ""
-    ],
-    "description": "Creates a React Arrow Function component without PropTypes and ES6 module system"
+    ]
   },
   "reactFunctionProps": {
     "prefix": "rfcp",
@@ -103,24 +102,23 @@
       "import PropTypes from 'prop-types';",
       "",
       "",
-      "const ${1:$TM_FILENAME_BASE} = () => {",
+      "const $TM_FILENAME_BASE = () => {",
       "\treturn (",
       "\t\t<div>",
-      "\t\t\t$2",
+      "\t\t\t$1",
       "\t\t</div>",
       "\t);",
       "};",
       "",
       "",
-      "${1:$TM_FILENAME_BASE}.propTypes = {",
-      "\t$0",
+      "$TM_FILENAME_BASE.propTypes = {",
+      "$0",
       "};",
       "",
       "",
-      "export default ${1:$TM_FILENAME_BASE};",
+      "export default $TM_FILENAME_BASE;",
       ""
-    ],
-    "description": "Creates a React Arrow Function component with PropTypes and ES6 module system"
+    ]
   },
   "classConstructor": {
     "prefix": "con",
@@ -130,8 +128,7 @@
       "\t$1",
       "}",
       ""
-    ],
-    "description": "Adds a default constructor for the class that contains props as arguments"
+    ]
   },
   "emptyState": {
     "prefix": "est",
@@ -409,7 +406,7 @@
   "testBlock": {
     "prefix": "test",
     "body": [
-      "test('should $1', () => {",
+      "test('$1', () => {",
       "\t$2",
       "});",
       "$0"
@@ -419,7 +416,7 @@
   "itBlock": {
     "prefix": "it",
     "body": [
-      "it('should $1', () => {",
+      "it('$1', () => {",
       "\t$2",
       "});",
       "$0"

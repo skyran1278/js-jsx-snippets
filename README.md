@@ -25,12 +25,13 @@ After install this snippets add this inside your settings
 | Trigger  | Content | Description |
 | -------: | ------- | ------- |
 | `imr`   | `import React from 'react';` | useful in test |
+| `ipt`   | `import PropTypes from 'prop-types';` |
 
 ## Basic methods
 | Trigger  | Content |
 | -------: | ------- |
 | `com`   | Comment Block |
-| `clg`   | `console.log();` |
+| `clg`   | `console.log()` |
 
 ## React components
 Only contain class component and function component.
