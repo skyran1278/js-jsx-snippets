@@ -2,7 +2,7 @@
   "name": "js-jsx-snippets",
   "displayName": "JS JSX Snippets",
   "description": "Extensions for React, Redux in JS with babel and ES7 syntax",
-  "version": "10.2.0",
+  "version": "11.0.0",
   "publisher": "skyran",
   "icon": "images/react-logo.png",
   "galleryBanner": {

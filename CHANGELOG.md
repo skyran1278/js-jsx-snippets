@@ -1,8 +1,19 @@
-# Change Log
+# Changelog
 
-All notable changes to the "js-jsx-snippets" extension will be documented in this file.
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
+## 11.0.0 (2021-10-01)
+
+
+### ⚠ BREAKING CHANGES
+
+* Convert filenames to pascal case for component names (#5)
+* remove support for ts
+
+### Features
+
+* Convert filenames to pascal case for component names ([#5](https://github.com/skyran1278/js-jsx-snippets/issues/5)) ([f7b69ea](https://github.com/skyran1278/js-jsx-snippets/commit/f7b69ea82d9da99a00fb18b2bce0a094fbbf8bd5))
+* remove support for ts ([d14912a](https://github.com/skyran1278/js-jsx-snippets/commit/d14912ac4396b9a8cedd6607aca150c3bdc99059))
 
 ## [10.2.0] - 2021-06-28
 
