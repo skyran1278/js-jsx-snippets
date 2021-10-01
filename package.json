@@ -29,5 +29,11 @@
         "path": "./snippets/snippets.json"
       }
     ]
+  },
+  "scripts": {
+    "release": "standard-version"
+  },
+  "devDependencies": {
+    "standard-version": "^9.3.1"
   }
 }
