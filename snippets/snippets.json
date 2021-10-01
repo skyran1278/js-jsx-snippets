@@ -28,7 +28,7 @@
     "body": [
       "import React, { Component } from 'react';",
       "",
-      "class $TM_FILENAME_BASE extends Component {",
+      "class ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/} extends Component {",
       "\trender() {",
       "\t\treturn (",
       "\t\t\t<div>",
@@ -38,7 +38,7 @@
       "\t}",
       "}",
       "",
-      "export default $TM_FILENAME_BASE;",
+      "export default ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/};",
       ""
     ]
   },
@@ -48,7 +48,7 @@
       "import React, { Component } from 'react';",
       "import {View, StyleSheet} from 'react-native';",
       "",
-      "class $TM_FILENAME_BASE extends Component {",
+      "class ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/} extends Component {",
       "\trender() {",
       "\t\treturn (",
       "\t\t\t<View>",
@@ -60,7 +60,7 @@
       "",
       "const styles = StyleSheet.create({})",
       "",
-      "export default $TM_FILENAME_BASE;",
+      "export default ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/};",
       ""
     ]
   },
@@ -71,7 +71,7 @@
       "import PropTypes from 'prop-types';",
       "",
       "",
-      "class $TM_FILENAME_BASE extends Component {",
+      "class ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/} extends Component {",
       "\trender() {",
       "\t\treturn (",
       "\t\t\t<div>",
@@ -82,12 +82,12 @@
       "}",
       "",
       "",
-      "$TM_FILENAME_BASE.propTypes = {",
+      "${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}.propTypes = {",
       "$0",
       "};",
       "",
       "",
-      "export default $TM_FILENAME_BASE;",
+      "export default ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/};",
       ""
     ]
   },
@@ -96,7 +96,7 @@
     "body": [
       "import React from 'react';",
       "",
-      "const $TM_FILENAME_BASE = () => {",
+      "const ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/} = () => {",
       "\treturn (",
       "\t\t<div>",
       "\t\t\t$1",
@@ -104,7 +104,7 @@
       "\t);",
       "}",
       "",
-      "export default $TM_FILENAME_BASE;",
+      "export default ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/};",
       ""
     ]
   },
@@ -115,7 +115,7 @@
       "import PropTypes from 'prop-types';",
       "",
       "",
-      "const $TM_FILENAME_BASE = () => {",
+      "const ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/} = () => {",
       "\treturn (",
       "\t\t<div>",
       "\t\t\t$1",
@@ -124,12 +124,12 @@
       "};",
       "",
       "",
-      "$TM_FILENAME_BASE.propTypes = {",
+      "${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}.propTypes = {",
       "$0",
       "};",
       "",
       "",
-      "export default $TM_FILENAME_BASE;",
+      "export default ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/};",
       ""
     ]
   },
@@ -139,7 +139,7 @@
       "import React from 'react';",
       "import {View, StyleSheet} from 'react-native';",
       "",
-      "const $TM_FILENAME_BASE = () => {",
+      "const ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/} = () => {",
       "\treturn (",
       "\t\t<View>",
       "\t\t\t$1",
@@ -149,7 +149,7 @@
       "",
       "const styles = StyleSheet.create({})",
       "",
-      "export default $TM_FILENAME_BASE;",
+      "export default ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/};",
       ""
     ]
   },
