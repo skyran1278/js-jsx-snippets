@@ -1,7 +1,7 @@
 {
   "name": "js-jsx-snippets",
   "displayName": "JS JSX Snippets",
-  "description": "Simple extensions for React, Redux in JS with babel and ES6 syntax",
+  "description": "Extensions for React, Redux in JS with babel and ES7 syntax",
   "version": "10.2.0",
   "publisher": "skyran",
   "icon": "images/react-logo.png",
@@ -26,14 +26,6 @@
       },
       {
         "language": "javascriptreact",
-        "path": "./snippets/snippets.json"
-      },
-      {
-        "language": "typescript",
-        "path": "./snippets/snippets.json"
-      },
-      {
-        "language": "typescriptreact",
         "path": "./snippets/snippets.json"
       }
     ]
