@@ -3,9 +3,7 @@
 ## Supported languages (file extensions)
 
 - JavaScript (.js)
-- TypeScript (.ts)
 - JavaScript React (.jsx)
-- TypeScript React (.tsx)
 
 ## Usage
 
