@@ -18,7 +18,12 @@
   "categories": [
     "Snippets"
   ],
-  "activationEvents": [],
+  "activationEvents": [
+    "onLanguage:typescript",
+    "onLanguage:typescriptreact",
+    "onLanguage:javascript",
+    "onLanguage:javascriptreact"
+  ],
   "main": "./out/extension.js",
   "contributes": {
     "snippets": [
@@ -38,20 +43,20 @@
         "language": "typescriptreact",
         "path": "./snippets/ts.code-snippets"
       }
-    ]
-  },
-  "configuration": {
-    "title": "JS JSX Snippets",
-    "properties": {
-      "jsJsxSnippets.settings.importReactOnTop": {
-        "type": "boolean",
-        "markdownDescription": "Controls if snippets should add `import React from 'react';` at the top of components.\nSet false if you have React +17 and use jsx transform.",
-        "default": true
-      },
-      "jsJsxSnippets.settings.typescript": {
-        "type": "boolean",
-        "markdownDescription": "Controls if React components have typescript Props typing.",
-        "default": true
+    ],
+    "configuration": {
+      "title": "JS JSX Snippets",
+      "properties": {
+        "jsJsxSnippets.settings.importReactOnTop": {
+          "type": "boolean",
+          "default": true,
+          "markdownDescription": "Controls if snippets should add `import React from 'react';` at the top of components.\nSet false if you have React +17 and use jsx transform."
+        },
+        "jsJsxSnippets.settings.typing": {
+          "type": "boolean",
+          "default": true,
+          "markdownDescription": "Controls if React components have typescript Props typing."
+        }
       }
     }
   },
