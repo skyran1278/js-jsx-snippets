@@ -18,22 +18,68 @@
   "categories": [
     "Snippets"
   ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
   "contributes": {
     "snippets": [
       {
         "language": "javascript",
-        "path": "./snippets/snippets.code-snippets"
+        "path": "./snippets/js.code-snippets"
       },
       {
         "language": "javascriptreact",
-        "path": "./snippets/snippets.code-snippets"
+        "path": "./snippets/js.code-snippets"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/ts.code-snippets"
+      },
+      {
+        "language": "typescriptreact",
+        "path": "./snippets/ts.code-snippets"
       }
     ]
   },
+  "configuration": {
+    "title": "JS JSX Snippets",
+    "properties": {
+      "jsJsxSnippets.settings.importReactOnTop": {
+        "type": "boolean",
+        "markdownDescription": "Controls if snippets should add `import React from 'react';` at the top of components.\nSet false if you have React +17 and use jsx transform.",
+        "default": true
+      },
+      "jsJsxSnippets.settings.typescript": {
+        "type": "boolean",
+        "markdownDescription": "Controls if React components have typescript Props typing.",
+        "default": true
+      }
+    }
+  },
   "scripts": {
-    "release": "standard-version"
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "vscode-test"
   },
   "devDependencies": {
-    "standard-version": "^9.3.1"
+    "@types/mocha": "^10.0.6",
+    "@types/node": "18.x",
+    "@types/vscode": "^1.87.0",
+    "@typescript-eslint/eslint-plugin": "^7.0.2",
+    "@typescript-eslint/parser": "^7.0.2",
+    "@vscode/test-cli": "^0.0.6",
+    "@vscode/test-electron": "^2.3.9",
+    "eslint": "^8.56.0",
+    "import-sort-style-module": "^6.0.0",
+    "prettier-plugin-import-sort": "^0.0.7",
+    "typescript": "^5.3.3"
+  },
+  "importSort": {
+    ".js, .jsx, .ts, .tsx": {
+      "style": "module",
+      "parser": "typescript"
+    }
   }
 }
