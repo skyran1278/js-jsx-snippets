@@ -1,5 +1,1 @@
-{
-  "importReactOnTop": true,
-  "typing": true,
-  "semicolon": true
-}
+{"importReactOnTop":true,"semicolon":true,"typing":true}

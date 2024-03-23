@@ -1,4 +1,5 @@
 import { writeFile } from 'fs/promises';
+import { join } from 'path';
 
 import { workspace } from 'vscode';
 
@@ -19,8 +20,12 @@ export const generateSnippets = async () => {
   ) {
     if (importReactOnTop && typing && semicolon) {
       await writeFile(
-        '../snippets/js.code-snippets',
+        join(__dirname, '../snippets/js.code-snippets'),
         JSON.stringify(jsImportReactOnTopSemicolon),
+      );
+      await writeFile(
+        join(__dirname, '../snippets/config.json'),
+        JSON.stringify(config),
       );
     }
   }
