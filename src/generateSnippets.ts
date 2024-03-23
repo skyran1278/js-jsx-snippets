@@ -5,6 +5,9 @@ import { workspace } from 'vscode';
 
 import outputConfig from '../snippets/config.json';
 import jsImportReactOnTopSemicolon from './js-import-react-on-top-semicolon.json';
+import jsImportReactOnTop from './js-import-react-on-top.json';
+import jsSemicolon from './js-semicolon.json';
+import js from './js.json';
 
 export const generateSnippets = async () => {
   const config = workspace.getConfiguration('jsJsxSnippets.settings');
@@ -15,18 +18,35 @@ export const generateSnippets = async () => {
 
   if (
     outputConfig.importReactOnTop !== importReactOnTop ||
-    outputConfig.typing !== typing ||
-    outputConfig.semicolon !== semicolon
+    outputConfig.semicolon !== semicolon ||
+    outputConfig.typing !== typing
   ) {
-    if (importReactOnTop && typing && semicolon) {
-      await writeFile(
-        join(__dirname, '../snippets/js.code-snippets'),
-        JSON.stringify(jsImportReactOnTopSemicolon),
-      );
-      await writeFile(
-        join(__dirname, '../snippets/config.json'),
-        JSON.stringify(config),
-      );
+    let jsSnippets = jsImportReactOnTopSemicolon;
+    if (importReactOnTop && semicolon && typing) {
+      jsSnippets = jsImportReactOnTopSemicolon;
+    } else if (importReactOnTop && semicolon && !typing) {
+      jsSnippets = jsImportReactOnTopSemicolon;
+    } else if (importReactOnTop && !semicolon && typing) {
+      jsSnippets = jsImportReactOnTop;
+    } else if (importReactOnTop && !semicolon && !typing) {
+      jsSnippets = jsImportReactOnTop;
+    } else if (!importReactOnTop && semicolon && typing) {
+      jsSnippets = jsSemicolon;
+    } else if (!importReactOnTop && semicolon && !typing) {
+      jsSnippets = jsSemicolon;
+    } else if (!importReactOnTop && !semicolon && typing) {
+      jsSnippets = js;
+    } else if (!importReactOnTop && !semicolon && !typing) {
+      jsSnippets = js;
     }
+
+    await writeFile(
+      join(__dirname, '../snippets/js.code-snippets'),
+      JSON.stringify(jsSnippets),
+    );
+    await writeFile(
+      join(__dirname, '../snippets/config.json'),
+      JSON.stringify(config),
+    );
   }
 };
