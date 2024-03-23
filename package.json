@@ -52,6 +52,11 @@
           "default": true,
           "markdownDescription": "Controls if snippets should add `import React from 'react';` at the top of components.\nSet false if you have React +17 and use jsx transform."
         },
+        "jsJsxSnippets.settings.semicolon": {
+          "type": "boolean",
+          "default": true,
+          "markdownDescription": "Controls if snippets should add semicolon at the end of the line."
+        },
         "jsJsxSnippets.settings.typing": {
           "type": "boolean",
           "default": true,
