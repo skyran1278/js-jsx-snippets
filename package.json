@@ -71,7 +71,8 @@
     "watch": "tsc -watch -p ./",
     "pretest": "npm run compile && npm run lint",
     "lint": "eslint src --ext ts",
-    "test": "vscode-test"
+    "test": "vscode-test",
+    "release": "release-it"
   },
   "devDependencies": {
     "@types/mocha": "^10.0.6",
@@ -84,6 +85,7 @@
     "eslint": "^8.56.0",
     "import-sort-style-module": "^6.0.0",
     "prettier-plugin-import-sort": "^0.0.7",
+    "release-it": "^17.1.1",
     "typescript": "^5.3.3"
   },
   "importSort": {
