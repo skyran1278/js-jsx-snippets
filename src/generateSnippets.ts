@@ -20,32 +20,23 @@ export const generateSnippets = async () => {
   const typing = config.get('typing');
   const semicolon = config.get('semicolon');
 
-  let jsSnippets = tsImportReactOnTopSemicolon;
-  let tsSnippets = tsImportReactOnTopSemicolonTyping;
-  if (importReactOnTop && semicolon && typing) {
-    jsSnippets = tsImportReactOnTopSemicolon;
-    tsSnippets = tsImportReactOnTopSemicolonTyping;
-  } else if (importReactOnTop && semicolon && !typing) {
-    jsSnippets = tsImportReactOnTopSemicolon;
-    tsSnippets = tsImportReactOnTopSemicolon;
-  } else if (importReactOnTop && !semicolon && typing) {
-    jsSnippets = tsImportReactOnTop;
-    tsSnippets = tsImportReactOnTopTyping;
-  } else if (importReactOnTop && !semicolon && !typing) {
-    jsSnippets = tsImportReactOnTop;
-    tsSnippets = tsImportReactOnTop;
-  } else if (!importReactOnTop && semicolon && typing) {
-    jsSnippets = tsSemicolon;
-    tsSnippets = tsSemicolonTyping;
-  } else if (!importReactOnTop && semicolon && !typing) {
-    jsSnippets = tsSemicolon;
-    tsSnippets = tsSemicolon;
-  } else if (!importReactOnTop && !semicolon && typing) {
-    jsSnippets = ts;
-    tsSnippets = tsTyping;
-  } else if (!importReactOnTop && !semicolon && !typing) {
-    jsSnippets = ts;
-  }
+  const snippets = {
+    tsImportReactOnTopSemicolonTyping,
+    tsImportReactOnTopSemicolon,
+    tsImportReactOnTopTyping,
+    tsImportReactOnTop,
+    tsSemicolonTyping,
+    tsSemicolon,
+    tsTyping,
+    ts,
+  };
+
+  // Optimized conditional logic
+  const jsKey: keyof typeof snippets = `ts${importReactOnTop ? 'ImportReactOnTop' : ''}${semicolon ? 'Semicolon' : ''}`;
+  const tsKey: keyof typeof snippets = `${jsKey}${typing ? 'Typing' : ''}`;
+  const jsSnippets = snippets[jsKey] || snippets.tsImportReactOnTopSemicolon;
+  const tsSnippets =
+    snippets[tsKey] || snippets.tsImportReactOnTopSemicolonTyping;
 
   await writeFile(
     join(__dirname, '../snippets/js.code-snippets'),
