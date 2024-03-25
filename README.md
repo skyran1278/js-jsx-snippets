@@ -127,7 +127,7 @@ import name from 'module';
 imd - Import package
 
 ```js
-import { } from 'module';
+import { | } from 'module';
 ```
 
 imr - Import React
@@ -145,7 +145,7 @@ import PropTypes from 'prop-types';
 clg - Console Log
 
 ```js
-console.log();
+console.log(|);
 ```
 
 rcc - Class Component
@@ -157,7 +157,7 @@ class App extends Component {
   render() {
     return (
       <div>
-
+        |
       </div>
     );
   }
@@ -176,7 +176,7 @@ class App extends Component {
   render() {
     return (
       <View>
-
+        |
       </View>
     );
   }
@@ -199,7 +199,7 @@ class App extends Component {
   render() {
     return (
       <div>
-
+        |
       </div>
     );
   }
@@ -222,7 +222,7 @@ import React from 'react';
 const App = () => {
   return (
     <div>
-
+      |
     </div>
   );
 }
@@ -240,7 +240,7 @@ import PropTypes from 'prop-types';
 const App = () => {
   return (
     <div>
-
+      |
     </div>
   );
 };
@@ -263,7 +263,7 @@ import { StyleSheet, View } from 'react-native';
 const App = () => {
   return (
     <View>
-
+      |
     </View>
   );
 }
@@ -278,7 +278,7 @@ con - Constructor
 ```js
 constructor(props) {
   super(props);
-
+  |
 }
 ```
 
@@ -286,7 +286,7 @@ est - Empty State
 
 ```js
 this.state = {
-
+  |
 };
 ```
 
@@ -294,7 +294,7 @@ cdm - ComponentDidMount
 
 ```js
 componentDidMount() {
-
+  |
 }
 ```
 
@@ -302,7 +302,7 @@ scu - ShouldComponentUpdate
 
 ```js
 shouldComponentUpdate(nextProps, nextState) {
-
+  |
 }
 ```
 
@@ -310,7 +310,7 @@ cdup - ComponentDidUpdate
 
 ```js
 componentDidUpdate(prevProps, prevState) {
-
+  |
 }
 ```
 
@@ -318,7 +318,7 @@ cwun - ComponentWillUnmount
 
 ```js
 componentWillUnmount() {
-
+  |
 }
 ```
 
@@ -327,7 +327,7 @@ gsbu - GetSnapshotBeforeUpdate
 ```js
 
 getSnapshotBeforeUpdate(prevProps, prevState) {
-
+  |
 }
 ```
 
@@ -335,7 +335,7 @@ gdsfp - GetDerivedStateFromProps
 
 ```js
 getSnapshotBeforeUpdate(prevProps, prevState) {
-
+  |
 }
 ```
 
@@ -343,51 +343,51 @@ cdc - ComponentDidCatch
 
 ```js
 componentDidCatch(error, info) {
-
+  |
 }
 ```
 
 sst - SetState with object as parameter
 
 ```js
-this.setState({  });
+this.setState(|)
 ```
 
 ssf - SetState with function as parameter
 
 ```js
-this.setState()
+this.setState((state, props) => { return { | }});
 ```
 
 props - this.props
 
 ```js
-this.props.
+this.props.|
 ```
 
 state - this.state
 
 ```js
-this.state.
+this.state.|
 ```
 
 bnd - Binds the this of method inside the constructor
 
 ```js
-this.method = this.method.bind(this);
+this.| = this.|.bind(this);
 ```
 
 useState - useState block
 
 ```js
-const [state, setState] = useState(initialState);
+const [state, setState] = useState(|);
 ```
 
 useEffect - useEffect block
 
 ```js
 useEffect(() => {
-
+  |
   return () => {
 
   };
@@ -397,13 +397,13 @@ useEffect(() => {
 useContext - useContext block
 
 ```js
-const context = useContext(contextValue);
+const context = useContext(|);
 ```
 
 describe - Describe Block
 
 ```js
-describe('', () => {
+describe('|', () => {
 
 });
 ```
@@ -411,7 +411,7 @@ describe('', () => {
 test - Test Block
 
 ```js
-test('', () => {
+test('|', () => {
 
 });
 ```
@@ -419,7 +419,7 @@ test('', () => {
 it - It Block
 
 ```js
-it('', () => {
+it('|', () => {
 
 });
 ```
