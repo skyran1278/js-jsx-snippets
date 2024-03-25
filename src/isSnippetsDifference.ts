@@ -1,9 +1,7 @@
-import { writeFile } from 'fs/promises';
-import { join } from 'path';
-
 import { workspace } from 'vscode';
 
-import { showRestartMessage } from './showRestartMessage';
+import outputJs from '../snippets/js.json';
+import outputTs from '../snippets/ts.json';
 import tsImportReactOnTopSemicolonTyping from './ts-import-react-on-top-semicolon-typing.json';
 import tsImportReactOnTopSemicolon from './ts-import-react-on-top-semicolon.json';
 import tsImportReactOnTopTyping from './ts-import-react-on-top-typing.json';
@@ -13,7 +11,7 @@ import tsSemicolon from './ts-semicolon.json';
 import tsTyping from './ts-typing.json';
 import ts from './ts.json';
 
-export const generateSnippets = async () => {
+export const isSnippetsDifference = (): boolean => {
   const config = workspace.getConfiguration('jsJsxSnippets.settings');
 
   const importReactOnTop = config.get('importReactOnTop');
@@ -38,18 +36,8 @@ export const generateSnippets = async () => {
   const tsSnippets =
     snippets[tsKey] || snippets.tsImportReactOnTopSemicolonTyping;
 
-  await writeFile(
-    join(__dirname, '../snippets/js.json'),
-    JSON.stringify(jsSnippets),
+  return (
+    JSON.stringify(jsSnippets) !== JSON.stringify(outputJs) ||
+    JSON.stringify(tsSnippets) !== JSON.stringify(outputTs)
   );
-  await writeFile(
-    join(__dirname, '../snippets/ts.json'),
-    JSON.stringify(tsSnippets),
-  );
-  await writeFile(
-    join(__dirname, '../snippets/config.json'),
-    JSON.stringify(config),
-  );
-
-  showRestartMessage();
 };

@@ -4,6 +4,7 @@ import { ConfigurationChangeEvent, ExtensionContext, workspace } from 'vscode';
 
 import { generateSnippets } from './generateSnippets';
 import { isConfigurationDifference } from './isConfigurationDifference';
+import { isSnippetsDifference } from './isSnippetsDifference';
 
 // This method is called when your extension is activated
 // Your extension is activated the very first time the command is executed
@@ -18,7 +19,7 @@ export async function activate(context: ExtensionContext) {
     },
   );
 
-  if (isConfigurationDifference()) {
+  if (isConfigurationDifference() || isSnippetsDifference()) {
     await generateSnippets();
   }
 }

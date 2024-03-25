@@ -29,19 +29,19 @@
     "snippets": [
       {
         "language": "javascript",
-        "path": "./snippets/js.code-snippets"
+        "path": "./snippets/js.json"
       },
       {
         "language": "javascriptreact",
-        "path": "./snippets/js.code-snippets"
+        "path": "./snippets/js.json"
       },
       {
         "language": "typescript",
-        "path": "./snippets/ts.code-snippets"
+        "path": "./snippets/ts.json"
       },
       {
         "language": "typescriptreact",
-        "path": "./snippets/ts.code-snippets"
+        "path": "./snippets/ts.json"
       }
     ],
     "configuration": {
