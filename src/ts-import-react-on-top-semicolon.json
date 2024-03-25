@@ -15,10 +15,6 @@
     "prefix": "ipt",
     "body": ["import PropTypes from 'prop-types';"]
   },
-  "Comment Block": {
-    "prefix": "com",
-    "body": ["/**", " * ${1}", " */"]
-  },
   "consoleLog": {
     "prefix": "clg",
     "body": "console.log($1)$0"
@@ -46,7 +42,7 @@
     "prefix": "rncc",
     "body": [
       "import React, { Component } from 'react';",
-      "import {View, StyleSheet} from 'react-native';",
+      "import { StyleSheet, View } from 'react-native';",
       "",
       "class ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/} extends Component {",
       "\trender() {",
@@ -137,7 +133,7 @@
     "prefix": "rnfc",
     "body": [
       "import React from 'react';",
-      "import {View, StyleSheet} from 'react-native';",
+      "import { StyleSheet, View } from 'react-native';",
       "",
       "const ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/} = () => {",
       "\treturn (",
