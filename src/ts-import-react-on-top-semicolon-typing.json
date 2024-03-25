@@ -177,12 +177,22 @@
   },
   "shouldComponentUpdate": {
     "prefix": "scu",
-    "body": ["shouldComponentUpdate(nextProps, nextState) {", "\t$1", "}", ""],
+    "body": [
+      "shouldComponentUpdate(nextProps: ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}Props, nextState: ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}State) {",
+      "\t$1",
+      "}",
+      ""
+    ],
     "description": "Invoked before rendering when new props or state are being received. "
   },
   "componentDidUpdate": {
     "prefix": "cdup",
-    "body": ["componentDidUpdate(prevProps, prevState) {", "\t$1", "}", ""],
+    "body": [
+      "componentDidUpdate(prevProps: ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}Props, prevState: ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}State) {",
+      "\t$1",
+      "}",
+      ""
+    ],
     "description": "Invoked immediately after the component's updates are flushed to the DOM."
   },
   "componentWillUnmount": {
@@ -193,7 +203,7 @@
   "getSnapshotBeforeUpdate": {
     "prefix": "gsbu",
     "body": [
-      "getSnapshotBeforeUpdate(prevProps, prevState) {",
+      "getSnapshotBeforeUpdate(prevProps: ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}Props, prevState: ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}State) {",
       "\t$0",
       "}",
       ""
@@ -203,7 +213,7 @@
   "getDerivedStateFromProps": {
     "prefix": "gdsfp",
     "body": [
-      "static getDerivedStateFromProps(nextProps, prevState) {",
+      "static getDerivedStateFromProps(nextProps: ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}Props, prevState: ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}State) {",
       "\t$0",
       "}",
       ""
