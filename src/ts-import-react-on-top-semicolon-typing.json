@@ -50,28 +50,6 @@
       ""
     ]
   },
-  "reactNativeClassComponent": {
-    "prefix": "rncc",
-    "body": [
-      "import React, { Component } from 'react';",
-      "import {View, StyleSheet} from 'react-native';",
-      "",
-      "class ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/} extends Component {",
-      "\trender() {",
-      "\t\treturn (",
-      "\t\t\t<View>",
-      "\t\t\t\t$1",
-      "\t\t\t</View>",
-      "\t\t);",
-      "\t}",
-      "}",
-      "",
-      "const styles = StyleSheet.create({})",
-      "",
-      "export default ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/};",
-      ""
-    ]
-  },
   "reactClassComponentPropTypes": {
     "prefix": "rccp",
     "body": [
@@ -136,26 +114,6 @@
       "$0",
       "};",
       "",
-      "",
-      "export default ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/};",
-      ""
-    ]
-  },
-  "reactNativeFunction": {
-    "prefix": "rnfc",
-    "body": [
-      "import React from 'react';",
-      "import {View, StyleSheet} from 'react-native';",
-      "",
-      "const ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/} = () => {",
-      "\treturn (",
-      "\t\t<View>",
-      "\t\t\t$1",
-      "\t\t</View>",
-      "\t);",
-      "}",
-      "",
-      "const styles = StyleSheet.create({})",
       "",
       "export default ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/};",
       ""
@@ -425,5 +383,47 @@
   "useContext": {
     "prefix": "useContext",
     "body": ["const ${1:context} = useContext(${2:contextValue});"]
+  },
+  "reactNativeClassComponent": {
+    "prefix": "rncc",
+    "body": [
+      "import React, { Component } from 'react';",
+      "import {View, StyleSheet} from 'react-native';",
+      "",
+      "class ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/} extends Component {",
+      "\trender() {",
+      "\t\treturn (",
+      "\t\t\t<View>",
+      "\t\t\t\t$1",
+      "\t\t\t</View>",
+      "\t\t);",
+      "\t}",
+      "}",
+      "",
+      "const styles = StyleSheet.create({})",
+      "",
+      "export default ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/};",
+      ""
+    ]
+  },
+  "reactNativeFunction": {
+    "prefix": "rnfc",
+    "body": [
+      "import React from 'react';",
+      "import {View, StyleSheet} from 'react-native';",
+      "",
+      "const ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/} = () => {",
+      "\treturn (",
+      "\t\t<View>",
+      "\t\t\t$1",
+      "\t\t</View>",
+      "\t);",
+      "}",
+      "",
+      "const styles = StyleSheet.create({})",
+      "",
+      "export default ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/};",
+      ""
+    ]
   }
 }

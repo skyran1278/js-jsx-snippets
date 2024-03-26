@@ -47,16 +47,12 @@ After install this snippets add this inside your settings
 
 ## React components
 
-Only contain class component and function component.
-
 |      Trigger | Content                                                  |
 | -----------: | -------------------------------------------------------- |
 |        `rcc` | class component skeleton                                 |
-|       `rncc` | react native class component skeleton                    |
 |       `rccp` | class component skeleton with prop types after the class |
 |        `rfc` | function component skeleton                              |
 |       `rfcp` | function component with prop types skeleton              |
-|       `rnfc` | react native function component skeleton                 |
 |        `con` | class default constructor with props                     |
 |        `est` | empty state object                                       |
 |        `cdm` | `componentDidMount method`                               |
@@ -74,6 +70,13 @@ Only contain class component and function component.
 |   `useState` | useState block                                           |
 |  `useEffect` | useEffect block                                          |
 | `useContext` | useContext block                                         |
+
+## React native components
+
+| Trigger | Content                                  |
+| ------: | ---------------------------------------- |
+|  `rncc` | react native class component skeleton    |
+|  `rnfc` | react native function component skeleton |
 
 ## Jest
 
@@ -166,28 +169,6 @@ class App extends Component {
 export default App;
 ```
 
-rncc - React Native Class Component
-
-```js
-import React, { Component } from 'react';
-import { StyleSheet, View } from 'react-native';
-
-class App extends Component {
-  render() {
-    return (
-      <View>
-        |
-      </View>
-    );
-  }
-}
-
-const styles = StyleSheet.create({})
-
-export default App;
-
-```
-
 rccp - Class Component with PropTypes
 
 ```js
@@ -250,25 +231,6 @@ App.propTypes = {
 
 };
 
-
-export default App;
-```
-
-rnfc - React Native Function Component
-
-```js
-import React from 'react';
-import { StyleSheet, View } from 'react-native';
-
-const App = () => {
-  return (
-    <View>
-      |
-    </View>
-  );
-}
-
-const styles = StyleSheet.create({})
 
 export default App;
 ```
@@ -398,6 +360,46 @@ useContext - useContext block
 
 ```js
 const context = useContext(|);
+```
+
+rncc - React Native Class Component
+
+```js
+import React, { Component } from 'react';
+import { StyleSheet, View } from 'react-native';
+
+class App extends Component {
+  render() {
+    return (
+      <View>
+        |
+      </View>
+    );
+  }
+}
+
+const styles = StyleSheet.create({})
+
+export default App;
+```
+
+rnfc - React Native Function Component
+
+```js
+import React from 'react';
+import { StyleSheet, View } from 'react-native';
+
+const App = () => {
+  return (
+    <View>
+      |
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({})
+
+export default App;
 ```
 
 describe - Describe Block
