@@ -53,14 +53,13 @@ After install this snippets add this inside your settings
 |       `rccp` | class component skeleton with prop types after the class |
 |        `rfc` | function component skeleton                              |
 |       `rfcp` | function component with prop types skeleton              |
-|        `con` | class default constructor with props                     |
 |        `est` | empty state object                                       |
 |        `cdm` | `componentDidMount method`                               |
 |        `scu` | `shouldComponentUpdate method`                           |
-|       `cdup` | `componentDidUpdate method`                              |
-|       `cwun` | `componentWillUnmount method`                            |
+|        `cdu` | `componentDidUpdate method`                              |
+|        `cwu` | `componentWillUnmount method`                            |
 |       `gsbu` | `getSnapshotBeforeUpdate method`                         |
-|      `gdsfp` | `static getDerivedStateFromProps method`                 |
+|        `gds` | `static getDerivedStateFromProps method`                 |
 |        `cdc` | `componentDidCatch method`                               |
 |        `sst` | `this.setState with object as parameter`                 |
 |        `ssf` | `this.setState with function as parameter`               |
@@ -235,15 +234,6 @@ App.propTypes = {
 export default App;
 ```
 
-con - Constructor
-
-```js
-constructor(props) {
-  super(props);
-  |
-}
-```
-
 est - Empty State
 
 ```js
@@ -268,7 +258,7 @@ shouldComponentUpdate(nextProps, nextState) {
 }
 ```
 
-cdup - ComponentDidUpdate
+cdu - ComponentDidUpdate
 
 ```js
 componentDidUpdate(prevProps, prevState) {
@@ -276,7 +266,7 @@ componentDidUpdate(prevProps, prevState) {
 }
 ```
 
-cwun - ComponentWillUnmount
+cwu - ComponentWillUnmount
 
 ```js
 componentWillUnmount() {
@@ -293,10 +283,10 @@ getSnapshotBeforeUpdate(prevProps, prevState) {
 }
 ```
 
-gdsfp - GetDerivedStateFromProps
+gds - GetDerivedStateFromProps
 
 ```js
-getSnapshotBeforeUpdate(prevProps, prevState) {
+static getDerivedStateFromProps(nextProps, prevState) {
   |
 }
 ```
