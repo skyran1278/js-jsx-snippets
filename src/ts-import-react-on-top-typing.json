@@ -1,19 +1,19 @@
 {
   "import": {
     "prefix": "imp",
-    "body": "import ${2:name} from '${1:module}';$0"
+    "body": "import ${2:name} from '${1:module}'$0"
   },
   "importDestructing": {
     "prefix": "imd",
-    "body": "import { $2 } from '${1:module}';$0"
+    "body": "import { $2 } from '${1:module}'$0"
   },
   "Import react": {
     "prefix": "imr",
-    "body": ["import React from 'react';", ""]
+    "body": ["import React from 'react'", ""]
   },
   "Import PropTypes": {
     "prefix": "ipt",
-    "body": ["import PropTypes from 'prop-types';"]
+    "body": ["import PropTypes from 'prop-types'"]
   },
   "Comment Block": {
     "prefix": "com",
@@ -26,7 +26,7 @@
   "reactClassComponent": {
     "prefix": "rcc",
     "body": [
-      "import React, { Component } from 'react';",
+      "import React, { Component } from 'react'",
       "",
       "class ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/} extends Component {",
       "\trender() {",
@@ -34,19 +34,19 @@
       "\t\t\t<div>",
       "\t\t\t\t$1",
       "\t\t\t</div>",
-      "\t\t);",
+      "\t\t)",
       "\t}",
       "}",
       "",
-      "export default ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/};",
+      "export default ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}",
       ""
     ]
   },
   "reactNativeClassComponent": {
     "prefix": "rncc",
     "body": [
-      "import React, { Component } from 'react';",
-      "import {View, StyleSheet} from 'react-native';",
+      "import React, { Component } from 'react'",
+      "import {View, StyleSheet} from 'react-native'",
       "",
       "class ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/} extends Component {",
       "\trender() {",
@@ -54,21 +54,21 @@
       "\t\t\t<View>",
       "\t\t\t\t$1",
       "\t\t\t</View>",
-      "\t\t);",
+      "\t\t)",
       "\t}",
       "}",
       "",
       "const styles = StyleSheet.create({})",
       "",
-      "export default ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/};",
+      "export default ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}",
       ""
     ]
   },
   "reactClassComponentPropTypes": {
     "prefix": "rccp",
     "body": [
-      "import React, { Component } from 'react';",
-      "import PropTypes from 'prop-types';",
+      "import React, { Component } from 'react'",
+      "import PropTypes from 'prop-types'",
       "",
       "",
       "class ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/} extends Component {",
@@ -77,42 +77,42 @@
       "\t\t\t<div>",
       "\t\t\t\t$1",
       "\t\t\t</div>",
-      "\t\t);",
+      "\t\t)",
       "\t}",
       "}",
       "",
       "",
       "${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}.propTypes = {",
       "$0",
-      "};",
+      "}",
       "",
       "",
-      "export default ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/};",
+      "export default ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}",
       ""
     ]
   },
   "reactFunction": {
     "prefix": "rfc",
     "body": [
-      "import React from 'react';",
+      "import React from 'react'",
       "",
       "const ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/} = () => {",
       "\treturn (",
       "\t\t<div>",
       "\t\t\t$1",
       "\t\t</div>",
-      "\t);",
+      "\t)",
       "}",
       "",
-      "export default ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/};",
+      "export default ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}",
       ""
     ]
   },
   "reactFunctionProps": {
     "prefix": "rfcp",
     "body": [
-      "import React from 'react';",
-      "import PropTypes from 'prop-types';",
+      "import React from 'react'",
+      "import PropTypes from 'prop-types'",
       "",
       "",
       "const ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/} = () => {",
@@ -120,46 +120,46 @@
       "\t\t<div>",
       "\t\t\t$1",
       "\t\t</div>",
-      "\t);",
-      "};",
+      "\t)",
+      "}",
       "",
       "",
       "${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}.propTypes = {",
       "$0",
-      "};",
+      "}",
       "",
       "",
-      "export default ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/};",
+      "export default ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}",
       ""
     ]
   },
   "reactNativeFunction": {
     "prefix": "rnfc",
     "body": [
-      "import React from 'react';",
-      "import {View, StyleSheet} from 'react-native';",
+      "import React from 'react'",
+      "import {View, StyleSheet} from 'react-native'",
       "",
       "const ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/} = () => {",
       "\treturn (",
       "\t\t<View>",
       "\t\t\t$1",
       "\t\t</View>",
-      "\t);",
+      "\t)",
       "}",
       "",
       "const styles = StyleSheet.create({})",
       "",
-      "export default ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/};",
+      "export default ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}",
       ""
     ]
   },
   "classConstructor": {
     "prefix": "con",
-    "body": ["constructor(props) {", "\tsuper(props);", "\t$1", "}", ""]
+    "body": ["constructor(props) {", "\tsuper(props)", "\t$1", "}", ""]
   },
   "emptyState": {
     "prefix": "est",
-    "body": ["this.state = {", "\t$1", "};"],
+    "body": ["this.state = {", "\t$1", "}"],
     "description": "Creates empty state object. To be used in a constructor."
   },
   "componentDidMount": {
@@ -214,7 +214,7 @@
   },
   "componentSetStateFunc": {
     "prefix": "ssf",
-    "body": ["this.setState((state, props) => { return { $1 }});", ""],
+    "body": ["this.setState((state, props) => { return { $1 }})", ""],
     "description": "Performs a shallow merge of nextState into current state"
   },
   "componentProps": {
@@ -229,7 +229,7 @@
   },
   "bindThis": {
     "prefix": "bnd",
-    "body": "this.$1 = this.$1.bind(this);",
+    "body": "this.$1 = this.$1.bind(this)",
     "description": "Binds the this of a method. To be used inside a constructor"
   },
   "propTypeArray": {
@@ -374,23 +374,23 @@
   },
   "describeBlock": {
     "prefix": "describe",
-    "body": ["describe('$1', () => {", "\t$0", "});", ""],
+    "body": ["describe('$1', () => {", "\t$0", "})", ""],
     "description": "Testing `describe` block"
   },
   "testBlock": {
     "prefix": "test",
-    "body": ["test('$1', () => {", "\t$2", "});", "$0"],
+    "body": ["test('$1', () => {", "\t$2", "})", "$0"],
     "description": "Testing `test` block"
   },
   "itBlock": {
     "prefix": "it",
-    "body": ["it('$1', () => {", "\t$2", "});", "$0"],
+    "body": ["it('$1', () => {", "\t$2", "})", "$0"],
     "description": "Testing `it` block"
   },
   "useState": {
     "prefix": "useState",
     "body": [
-      "const [${1:state}, set${1/(.*)/${1:/capitalize}/}] = useState(${2:initialState});"
+      "const [${1:state}, set${1/(.*)/${1:/capitalize}/}] = useState(${2:initialState})"
     ]
   },
   "useEffect": {
@@ -400,12 +400,12 @@
       "\t${1:effect}",
       "\treturn () => {",
       "\t\t${2:cleanup}",
-      "\t};",
-      "}, [${3:input}]);"
+      "\t}",
+      "}, [${3:input}])"
     ]
   },
   "useContext": {
     "prefix": "useContext",
-    "body": ["const ${1:context} = useContext(${2:contextValue});"]
+    "body": ["const ${1:context} = useContext(${2:contextValue})"]
   }
 }
