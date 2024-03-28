@@ -3,7 +3,7 @@ import { join } from 'path';
 
 import { workspace } from 'vscode';
 
-import { showRestartMessage } from './showRestartMessage';
+import { showRestartMessage } from './show-restart-message';
 import tsImportReactOnTopSemicolonTyping from './ts-import-react-on-top-semicolon-typing.json';
 import tsImportReactOnTopSemicolon from './ts-import-react-on-top-semicolon.json';
 import tsImportReactOnTopTyping from './ts-import-react-on-top-typing.json';
