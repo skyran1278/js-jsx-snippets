@@ -18,7 +18,7 @@
   "reactClassComponent": {
     "prefix": "rcc",
     "body": [
-      "import React from 'react';",
+      "import React, { Component } from 'react';",
       "",
       "interface ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}Props {",
       "\t",
@@ -28,7 +28,7 @@
       "\t",
       "}",
       "",
-      "class ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/} extends React.Component<${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}Props, ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}State> {",
+      "class ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/} extends Component<${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}Props, ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}State> {",
       "\trender() {",
       "\t\treturn (",
       "\t\t\t<div>",
