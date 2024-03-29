@@ -26,19 +26,19 @@
     "snippets": [
       {
         "language": "javascript",
-        "path": "./snippets/js.json"
+        "path": "./snippets/javascript-snippets.json"
       },
       {
         "language": "javascriptreact",
-        "path": "./snippets/js.json"
+        "path": "./snippets/javascript-snippets.json"
       },
       {
         "language": "typescript",
-        "path": "./snippets/ts.json"
+        "path": "./snippets/typescript-snippets.json"
       },
       {
         "language": "typescriptreact",
-        "path": "./snippets/ts.json"
+        "path": "./snippets/typescript-snippets.json"
       }
     ],
     "configuration": {
@@ -65,7 +65,7 @@
   "scripts": {
     "vscode:prepublish": "npm run build",
     "build": "tsc -p ./ && node out/generate-all-snippets.js",
-    "watch": "tsc -watch -p ./",
+    "watch": "npm run build && tsc -watch -p ./",
     "pretest": "npm run build && npm run lint",
     "lint": "eslint src --ext ts",
     "test": "vscode-test",
