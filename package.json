@@ -19,10 +19,7 @@
     "Snippets"
   ],
   "activationEvents": [
-    "onLanguage:typescript",
-    "onLanguage:typescriptreact",
-    "onLanguage:javascript",
-    "onLanguage:javascriptreact"
+    "onStartupFinished"
   ],
   "main": "./out/extension.js",
   "contributes": {
@@ -66,10 +63,10 @@
     }
   },
   "scripts": {
-    "vscode:prepublish": "npm run compile",
-    "compile": "tsc -p ./",
+    "vscode:prepublish": "npm run build",
+    "build": "tsc -p ./ && node out/generate-all-snippets.js",
     "watch": "tsc -watch -p ./",
-    "pretest": "npm run compile && npm run lint",
+    "pretest": "npm run build && npm run lint",
     "lint": "eslint src --ext ts",
     "test": "vscode-test",
     "release": "dotenv release-it --"
