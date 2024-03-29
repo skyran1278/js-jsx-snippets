@@ -1,6 +1,6 @@
 {
   "verbose": true,
   "ext": "ts,json",
-  "ignore": ["out/", "snippets/"],
+  "ignore": ["build/", "snippets/"],
   "exec": "npm run build"
 }

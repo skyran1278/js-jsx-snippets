@@ -1,4 +1,4 @@
-out
+build
 dist
 node_modules
 .vscode-test/

@@ -1,6 +1,6 @@
 import { workspace } from 'vscode';
 
-import outputJs from '../snippets/javascript-snippets.json';
+import productionJs from '../snippets/javascript-snippets.json';
 import jsImportReactOnTopSemicolon from '../snippets/js-import-react-on-top-semicolon.json';
 import jsImportReactOnTop from '../snippets/js-import-react-on-top.json';
 import jsSemicolon from '../snippets/js-semicolon.json';
@@ -9,7 +9,7 @@ import tsImportReactOnTopSemicolon from '../snippets/ts-import-react-on-top-semi
 import tsImportReactOnTop from '../snippets/ts-import-react-on-top.json';
 import tsSemicolon from '../snippets/ts-semicolon.json';
 import ts from '../snippets/ts.json';
-import outputTs from '../snippets/typescript-snippets.json';
+import productionTs from '../snippets/typescript-snippets.json';
 
 export const isSnippetsDifference = (): boolean => {
   const config = workspace.getConfiguration('jsJsxSnippets.settings');
@@ -35,7 +35,7 @@ export const isSnippetsDifference = (): boolean => {
   const tsSnippets = snippets[tsKey] || snippets.tsImportReactOnTopSemicolon;
 
   return (
-    JSON.stringify(jsSnippets) !== JSON.stringify(outputJs) ||
-    JSON.stringify(tsSnippets) !== JSON.stringify(outputTs)
+    JSON.stringify(jsSnippets) !== JSON.stringify(productionJs) ||
+    JSON.stringify(tsSnippets) !== JSON.stringify(productionTs)
   );
 };

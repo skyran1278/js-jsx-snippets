@@ -21,7 +21,7 @@
   "activationEvents": [
     "onStartupFinished"
   ],
-  "main": "./out/extension.js",
+  "main": "./build/extension.js",
   "contributes": {
     "snippets": [
       {
@@ -64,7 +64,7 @@
   },
   "scripts": {
     "vscode:prepublish": "npm run build",
-    "build": "tsc -p ./ && node out/script/generate-all-snippets.js",
+    "build": "tsc -p ./ && node build/script/generate-all-snippets.js",
     "watch": "nodemon",
     "pretest": "npm run build && npm run lint",
     "lint": "eslint src --ext ts",
