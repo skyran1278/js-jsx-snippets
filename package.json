@@ -64,7 +64,7 @@
   },
   "scripts": {
     "vscode:prepublish": "npm run build",
-    "build": "tsc -p ./ && node out/generate-all-snippets.js",
+    "build": "tsc -p ./ && node out/script/generate-all-snippets.js",
     "watch": "npm run build && tsc -watch -p ./",
     "pretest": "npm run build && npm run lint",
     "lint": "eslint src --ext ts",

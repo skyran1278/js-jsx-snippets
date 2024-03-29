@@ -41,11 +41,11 @@ const generateAllSnippets = async () => {
     ...reactTsSnippets,
   };
   await writeFile(
-    join(__dirname, '../snippets/ts-import-react-on-top-semicolon.json'),
+    join(__dirname, '../../snippets/ts-import-react-on-top-semicolon.json'),
     JSON.stringify(tsImportReactOnTopSemicolon),
   );
   await generateNoSemicolonSnippets(
-    join(__dirname, '../snippets/ts-import-react-on-top.json'),
+    join(__dirname, '../../snippets/ts-import-react-on-top.json'),
     tsImportReactOnTopSemicolon,
   );
 
@@ -61,11 +61,11 @@ const generateAllSnippets = async () => {
     ...propTypeSnippets,
   };
   await writeFile(
-    join(__dirname, '../snippets/js-import-react-on-top-semicolon.json'),
+    join(__dirname, '../../snippets/js-import-react-on-top-semicolon.json'),
     JSON.stringify(jsImportReactOnTopSemicolon),
   );
   await generateNoSemicolonSnippets(
-    join(__dirname, '../snippets/js-import-react-on-top.json'),
+    join(__dirname, '../../snippets/js-import-react-on-top.json'),
     jsImportReactOnTopSemicolon,
   );
 
@@ -79,11 +79,11 @@ const generateAllSnippets = async () => {
     ...reactTsSnippets,
   };
   await writeFile(
-    join(__dirname, '../snippets/ts-semicolon.json'),
+    join(__dirname, '../../snippets/ts-semicolon.json'),
     JSON.stringify(tsSemicolon),
   );
   await generateNoSemicolonSnippets(
-    join(__dirname, '../snippets/ts.json'),
+    join(__dirname, '../../snippets/ts.json'),
     tsSemicolon,
   );
 
@@ -99,11 +99,11 @@ const generateAllSnippets = async () => {
     ...propTypeSnippets,
   };
   await writeFile(
-    join(__dirname, '../snippets/js-semicolon.json'),
+    join(__dirname, '../../snippets/js-semicolon.json'),
     JSON.stringify(jsSemicolon),
   );
   await generateNoSemicolonSnippets(
-    join(__dirname, '../snippets/js.json'),
+    join(__dirname, '../../snippets/js.json'),
     jsSemicolon,
   );
 };
