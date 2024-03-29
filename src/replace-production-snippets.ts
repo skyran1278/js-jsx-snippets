@@ -46,5 +46,5 @@ export const replaceProductionSnippets = async () => {
     JSON.stringify(tsSnippets),
   );
 
-  showRestartMessage();
+  await showRestartMessage();
 };
