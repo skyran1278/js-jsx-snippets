@@ -65,7 +65,7 @@
   "scripts": {
     "vscode:prepublish": "npm run build",
     "build": "tsc -p ./ && node out/script/generate-all-snippets.js",
-    "watch": "npm run build && tsc -watch -p ./",
+    "watch": "nodemon",
     "pretest": "npm run build && npm run lint",
     "lint": "eslint src --ext ts",
     "test": "vscode-test",
@@ -83,6 +83,7 @@
     "dotenv-cli": "^7.4.1",
     "eslint": "^8.56.0",
     "import-sort-style-module": "^6.0.0",
+    "nodemon": "^3.1.0",
     "prettier-plugin-import-sort": "^0.0.7",
     "release-it": "^17.1.1",
     "typescript": "^5.3.3"
