@@ -15,14 +15,6 @@
 - TypeScript (.ts)
 - TypeScript React (.tsx)
 
-## Usage
-
-After install this snippets add this inside your settings
-
-```js
-"editor.snippetSuggestions": "top",
-```
-
 ## Snippets
 
 ## Import package
@@ -31,8 +23,8 @@ After install this snippets add this inside your settings
 | ------: | ------------------------------------- | -------------- |
 |   `imp` | `import name from 'module';`          |                |
 |   `imd` | `import { } from 'module';`           |                |
-|   `imr` | `import React from 'react';`          | useful in test |
 |   `ipt` | `import PropTypes from 'prop-types';` |                |
+|   `imr` | `import React from 'react';`          | useful in test |
 
 ## Basic methods
 

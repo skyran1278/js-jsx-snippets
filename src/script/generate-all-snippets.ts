@@ -7,6 +7,7 @@ import {
   importPackageSnippets,
   importReactJsComponentSnippets,
   importReactPropTypesComponentSnippets,
+  importReactSnippets,
   importReactTsComponentSnippets,
   jestSnippets,
   propTypeSnippets,
@@ -27,12 +28,13 @@ const generateNoSemicolonSnippets = async (
     const value = snippets[key as keyof typeof snippets];
     value.body = value.body.map((line) => line.replace(/;/, ''));
   }
-  await writeFile(path, JSON.stringify(snippets));
+  await writeFile(path, JSON.stringify(snippets, null, 2));
 };
 
 const generateAllSnippets = async () => {
   const tsImportReactOnTopSemicolon = {
     ...importPackageSnippets,
+    ...importReactSnippets,
     ...baseSnippets,
     ...reactBaseSnippets,
     ...jestSnippets,
@@ -42,7 +44,7 @@ const generateAllSnippets = async () => {
   };
   await writeFile(
     join(__dirname, '../../snippets/ts-import-react-on-top-semicolon.json'),
-    JSON.stringify(tsImportReactOnTopSemicolon),
+    JSON.stringify(tsImportReactOnTopSemicolon, null, 2),
   );
   await generateNoSemicolonSnippets(
     join(__dirname, '../../snippets/ts-import-react-on-top.json'),
@@ -51,6 +53,7 @@ const generateAllSnippets = async () => {
 
   const jsImportReactOnTopSemicolon = {
     ...importPackageSnippets,
+    ...importReactSnippets,
     ...baseSnippets,
     ...reactBaseSnippets,
     ...jestSnippets,
@@ -62,7 +65,7 @@ const generateAllSnippets = async () => {
   };
   await writeFile(
     join(__dirname, '../../snippets/js-import-react-on-top-semicolon.json'),
-    JSON.stringify(jsImportReactOnTopSemicolon),
+    JSON.stringify(jsImportReactOnTopSemicolon, null, 2),
   );
   await generateNoSemicolonSnippets(
     join(__dirname, '../../snippets/js-import-react-on-top.json'),
@@ -80,7 +83,7 @@ const generateAllSnippets = async () => {
   };
   await writeFile(
     join(__dirname, '../../snippets/ts-semicolon.json'),
-    JSON.stringify(tsSemicolon),
+    JSON.stringify(tsSemicolon, null, 2),
   );
   await generateNoSemicolonSnippets(
     join(__dirname, '../../snippets/ts.json'),
@@ -100,7 +103,7 @@ const generateAllSnippets = async () => {
   };
   await writeFile(
     join(__dirname, '../../snippets/js-semicolon.json'),
-    JSON.stringify(jsSemicolon),
+    JSON.stringify(jsSemicolon, null, 2),
   );
   await generateNoSemicolonSnippets(
     join(__dirname, '../../snippets/js.json'),

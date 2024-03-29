@@ -15,13 +15,16 @@ export const importPackageSnippets: Snippets = {
     prefix: 'imd',
     body: ["import { $2 } from '${1:module}';$0"],
   },
-  'Import React': {
-    prefix: 'imr',
-    body: ["import React from 'react';", ''],
-  },
   'Import PropTypes': {
     prefix: 'ipt',
     body: ["import PropTypes from 'prop-types';"],
+  },
+};
+
+export const importReactSnippets: Snippets = {
+  'Import React': {
+    prefix: 'imr',
+    body: ["import React from 'react';", ''],
   },
 };
 
