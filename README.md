@@ -25,17 +25,12 @@ After install this snippets add this inside your settings
 
 ## Snippets
 
-## Import and export
-
-| Trigger | Content                      |
-| ------: | ---------------------------- |
-|   `imp` | `import name from 'module';` |
-|   `imd` | `import { } from 'module';`  |
-
 ## Import package
 
-| Trigger | Content                               | Description    |
+| Trigger | Content                               |                |
 | ------: | ------------------------------------- | -------------- |
+|   `imp` | `import name from 'module';`          |                |
+|   `imd` | `import { } from 'module';`           |                |
 |   `imr` | `import React from 'react';`          | useful in test |
 |   `ipt` | `import PropTypes from 'prop-types';` |                |
 
