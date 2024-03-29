@@ -1,13 +1,13 @@
 {
-  "import": {
+  "Import": {
     "prefix": "imp",
     "body": "import ${2:name} from '${1:module}';$0"
   },
-  "importDestructing": {
+  "Import Destructing": {
     "prefix": "imd",
     "body": "import { $2 } from '${1:module}';$0"
   },
-  "Import react": {
+  "Import React": {
     "prefix": "imr",
     "body": ["import React from 'react';", ""]
   },
@@ -15,11 +15,11 @@
     "prefix": "ipt",
     "body": ["import PropTypes from 'prop-types';"]
   },
-  "consoleLog": {
+  "console.log": {
     "prefix": "clg",
     "body": "console.log($1)$0"
   },
-  "reactClassComponent": {
+  "React Class Component": {
     "prefix": "rcc",
     "body": [
       "import React, { Component } from 'react';",
@@ -38,7 +38,7 @@
       ""
     ]
   },
-  "reactClassComponentPropTypes": {
+  "React Class Component PropTypes": {
     "prefix": "rccp",
     "body": [
       "import React, { Component } from 'react';",
@@ -65,7 +65,7 @@
       ""
     ]
   },
-  "reactFunction": {
+  "React Function": {
     "prefix": "rfc",
     "body": [
       "import React from 'react';",
@@ -82,7 +82,7 @@
       ""
     ]
   },
-  "reactFunctionProps": {
+  "React Function Props": {
     "prefix": "rfcp",
     "body": [
       "import React from 'react';",
@@ -106,11 +106,6 @@
       "export default ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/};",
       ""
     ]
-  },
-  "emptyState": {
-    "prefix": "est",
-    "body": ["this.state = {", "\t$1", "};"],
-    "description": "Creates empty state object. To be used in a constructor."
   },
   "componentDidMount": {
     "prefix": "cdm",
@@ -157,27 +152,32 @@
     "body": ["componentDidCatch(error, info) {", "\t$0", "}", ""],
     "description": "Error boundaries catch errors during rendering, in lifecycle methods, and in constructors of the whole tree below them."
   },
-  "componentSetStateObject": {
+  "setState": {
     "prefix": "sst",
     "body": "this.setState($1)",
     "description": "Performs a shallow merge of nextState into current state"
   },
-  "componentSetStateFunc": {
+  "setState Function": {
     "prefix": "ssf",
     "body": ["this.setState((state, props) => { return { $1 }});", ""],
     "description": "Performs a shallow merge of nextState into current state"
   },
-  "componentProps": {
+  "props": {
     "prefix": "props",
     "body": "this.props.$1",
     "description": "Access component's props"
   },
-  "componentState": {
+  "state": {
     "prefix": "state",
     "body": "this.state.$1",
     "description": "Access component's state"
   },
-  "bindThis": {
+  "Empty State": {
+    "prefix": "est",
+    "body": ["this.state = {", "\t$1", "};"],
+    "description": "Creates empty state object. To be used in a constructor."
+  },
+  "bind": {
     "prefix": "bnd",
     "body": "this.$1 = this.$1.bind(this);",
     "description": "Binds the this of a method. To be used inside a constructor"
@@ -322,17 +322,17 @@
     "body": ["PropTypes.shape({", "\t$1", "}).isRequired,"],
     "description": "An object taking on a particular shape required"
   },
-  "describeBlock": {
+  "describe": {
     "prefix": "describe",
     "body": ["describe('$1', () => {", "\t$0", "});", ""],
     "description": "Testing `describe` block"
   },
-  "testBlock": {
+  "test": {
     "prefix": "test",
     "body": ["test('$1', () => {", "\t$2", "});", "$0"],
     "description": "Testing `test` block"
   },
-  "itBlock": {
+  "it": {
     "prefix": "it",
     "body": ["it('$1', () => {", "\t$2", "});", "$0"],
     "description": "Testing `it` block"
@@ -358,7 +358,7 @@
     "prefix": "useContext",
     "body": ["const ${1:context} = useContext($2);"]
   },
-  "reactNativeClassComponent": {
+  "React Native Class Component": {
     "prefix": "rncc",
     "body": [
       "import React, { Component } from 'react';",
@@ -380,7 +380,7 @@
       ""
     ]
   },
-  "reactNativeFunction": {
+  "React Native Function": {
     "prefix": "rnfc",
     "body": [
       "import React from 'react';",

@@ -2,9 +2,8 @@
 // Import the module and reference it with the alias vscode in your code below
 import { ConfigurationChangeEvent, ExtensionContext, workspace } from 'vscode';
 
-import { generateSnippets } from './generate-snippets';
-import { isConfigurationDifference } from './is-configuration-difference';
 import { isSnippetsDifference } from './is-snippets-difference';
+import { replaceProductionSnippets } from './replace-production-snippets';
 
 // This method is called when your extension is activated
 // Your extension is activated the very first time the command is executed
@@ -14,13 +13,13 @@ export async function activate(context: ExtensionContext) {
   workspace.onDidChangeConfiguration(
     async ({ affectsConfiguration }: ConfigurationChangeEvent) => {
       if (affectsConfiguration('jsJsxSnippets')) {
-        await generateSnippets();
+        await replaceProductionSnippets();
       }
     },
   );
 
-  if (isConfigurationDifference() || isSnippetsDifference()) {
-    await generateSnippets();
+  if (isSnippetsDifference()) {
+    await replaceProductionSnippets();
   }
 }
 
