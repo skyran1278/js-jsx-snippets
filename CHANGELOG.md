@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [11.1.0](https://github.com/skyran1278/js-jsx-snippets/compare/v11.0.1...v11.1.0) (2024-03-30)
+
+
+### Features
+
+* **build:** integrate nodemon for development auto-reload ([da7711f](https://github.com/skyran1278/js-jsx-snippets/commit/da7711f3a7069c8794c9521a691aec4bc584e172))
+* **build:** introduce release script and update dependencies ([782ae14](https://github.com/skyran1278/js-jsx-snippets/commit/782ae140707b67ed02fac59f2eea151e6b0b6811))
+* **extension:** enable activation for TypeScript and JavaScript environments ([dedc4aa](https://github.com/skyran1278/js-jsx-snippets/commit/dedc4aa574695baa76fd232f0d4008ad30ee2991))
+* **extension:** support TypeScript snippets and improve development setup ([4d289fd](https://github.com/skyran1278/js-jsx-snippets/commit/4d289fd61cd3d18be5cc30e89e024a5f9193b977))
+* **snippets:** add initial config for React snippets auto-formatting ([48afde1](https://github.com/skyran1278/js-jsx-snippets/commit/48afde14a32e2a9c0e90d5d7014f83834ff07e93))
+* **snippets:** add React specific snippets and enhance JSON formatting ([a4e0dee](https://github.com/skyran1278/js-jsx-snippets/commit/a4e0dee4ca340d5be9b872359a3283d4eb3143c2))
+* **snippets:** add toggle for semicolons in JS/JSX snippets config ([213f2fe](https://github.com/skyran1278/js-jsx-snippets/commit/213f2fe98bdda35332ef5d5c9c6c06f7ab8a206f))
+* **snippets:** add TypeScript and JavaScript snippet generation logic ([156a87c](https://github.com/skyran1278/js-jsx-snippets/commit/156a87c303cd6f1d83c3347fca8bb30abb27a711))
+* **snippets:** add TypeScript snippet definitions for enhanced editor support ([5538fcb](https://github.com/skyran1278/js-jsx-snippets/commit/5538fcbe8b47fd47d5aaf9707850ac5a0c5787b5))
+* **snippets:** add TypeScript support and expand snippet options ([2ed4097](https://github.com/skyran1278/js-jsx-snippets/commit/2ed4097fbcdf4080d167710447df4ac7f809da0e))
+* **snippets:** add utility to detect snippet configuration changes ([abc9c61](https://github.com/skyran1278/js-jsx-snippets/commit/abc9c617598bc163eb5b46693b46032455a9f262))
+* **snippets:** enhance snippet file path handling and introduce config file writing ([9b70df1](https://github.com/skyran1278/js-jsx-snippets/commit/9b70df1b348c7ae02486280603c8cdf27ec73c56))
+* **vscode:** add .vscodeignore to exclude unnecessary files from packaging ([f4789ce](https://github.com/skyran1278/js-jsx-snippets/commit/f4789ce0e1a2629c5ce255800c4f4250f01740c3))
+
 ### [11.0.1](https://github.com/skyran1278/js-jsx-snippets/compare/v11.0.0...v11.0.1) (2023-01-03)
 
 ## 11.0.0 (2021-10-01)
