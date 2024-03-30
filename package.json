@@ -18,22 +18,82 @@
   "categories": [
     "Snippets"
   ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./build/extension.js",
   "contributes": {
     "snippets": [
       {
         "language": "javascript",
-        "path": "./snippets/snippets.code-snippets"
+        "path": "./snippets/javascript-snippets.json"
       },
       {
         "language": "javascriptreact",
-        "path": "./snippets/snippets.code-snippets"
+        "path": "./snippets/javascript-snippets.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/typescript-snippets.json"
+      },
+      {
+        "language": "typescriptreact",
+        "path": "./snippets/typescript-snippets.json"
       }
-    ]
+    ],
+    "configuration": {
+      "title": "JS JSX Snippets",
+      "properties": {
+        "jsJsxSnippets.settings.importReactOnTop": {
+          "type": "boolean",
+          "default": true,
+          "markdownDescription": "Controls if snippets should add `import React from 'react';` at the top of components.\nSet false if you have React +17 and use jsx transform."
+        },
+        "jsJsxSnippets.settings.semicolon": {
+          "type": "boolean",
+          "default": true,
+          "markdownDescription": "Controls if snippets should add semicolon at the end of the line."
+        },
+        "jsJsxSnippets.settings.typing": {
+          "type": "boolean",
+          "default": true,
+          "markdownDescription": "Controls if React components have typescript Props typing."
+        }
+      }
+    }
   },
   "scripts": {
-    "release": "standard-version"
+    "vscode:prepublish": "npm run build",
+    "build": "tsc -p ./ && node build/script/generate-all-snippets.js",
+    "watch": "nodemon",
+    "pretest": "npm run build && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "vscode-test",
+    "release": "dotenv release-it --"
   },
   "devDependencies": {
-    "standard-version": "^9.3.1"
+    "@release-it/conventional-changelog": "^8.0.1",
+    "@types/lodash": "^4.17.0",
+    "@types/mocha": "^10.0.6",
+    "@types/node": "18.x",
+    "@types/vscode": "^1.87.0",
+    "@typescript-eslint/eslint-plugin": "^7.0.2",
+    "@typescript-eslint/parser": "^7.0.2",
+    "@vscode/test-cli": "^0.0.6",
+    "@vscode/test-electron": "^2.3.9",
+    "dotenv-cli": "^7.4.1",
+    "eslint": "^8.56.0",
+    "import-sort-style-module": "^6.0.0",
+    "lodash": "^4.17.21",
+    "nodemon": "^3.1.0",
+    "prettier-plugin-import-sort": "^0.0.7",
+    "release-it": "^17.1.1",
+    "typescript": "^5.3.3"
+  },
+  "importSort": {
+    ".js, .jsx, .ts, .tsx": {
+      "style": "module",
+      "parser": "typescript"
+    }
   }
 }

@@ -1,0 +1,287 @@
+{
+  "Import": {
+    "prefix": "imp",
+    "body": [
+      "import ${2:name} from '${1:module}'$0"
+    ]
+  },
+  "Import Destructing": {
+    "prefix": "imd",
+    "body": [
+      "import { $2 } from '${1:module}'$0"
+    ]
+  },
+  "Import PropTypes": {
+    "prefix": "ipt",
+    "body": [
+      "import PropTypes from 'prop-types'"
+    ]
+  },
+  "Import React": {
+    "prefix": "imr",
+    "body": [
+      "import React from 'react'",
+      ""
+    ]
+  },
+  "console.log": {
+    "prefix": "clg",
+    "body": [
+      "console.log($1)$0"
+    ]
+  },
+  "componentDidMount": {
+    "prefix": "cdm",
+    "body": [
+      "componentDidMount() {",
+      "\t$1",
+      "}",
+      ""
+    ],
+    "description": "Invoked once, only on the client (not on the server), immediately after the initial rendering occurs."
+  },
+  "componentWillUnmount": {
+    "prefix": "cwu",
+    "body": [
+      "componentWillUnmount() {",
+      "\t$1",
+      "}",
+      ""
+    ],
+    "description": "Invoked immediately before a component is unmounted from the DOM."
+  },
+  "componentDidCatch": {
+    "prefix": "cdc",
+    "body": [
+      "componentDidCatch(error, info) {",
+      "\t$0",
+      "}",
+      ""
+    ],
+    "description": "Error boundaries catch errors during rendering, in lifecycle methods, and in constructors of the whole tree below them."
+  },
+  "setState": {
+    "prefix": "sst",
+    "body": [
+      "this.setState($1)"
+    ],
+    "description": "Performs a shallow merge of nextState into current state"
+  },
+  "setState Function": {
+    "prefix": "ssf",
+    "body": [
+      "this.setState((state, props) => { return { $1 }})",
+      ""
+    ],
+    "description": "Performs a shallow merge of nextState into current state"
+  },
+  "props": {
+    "prefix": "props",
+    "body": [
+      "this.props.$1"
+    ],
+    "description": "Access component's props"
+  },
+  "state": {
+    "prefix": "state",
+    "body": [
+      "this.state.$1"
+    ],
+    "description": "Access component's state"
+  },
+  "Empty State": {
+    "prefix": "est",
+    "body": [
+      "this.state = {",
+      "\t$1",
+      "}"
+    ],
+    "description": "Creates empty state object. To be used in a constructor."
+  },
+  "bind": {
+    "prefix": "bnd",
+    "body": [
+      "this.$1 = this.$1.bind(this)"
+    ],
+    "description": "Binds the this of a method. To be used inside a constructor"
+  },
+  "useState": {
+    "prefix": "useState",
+    "body": [
+      "const [${1:state}, set${1/(.*)/${1:/pascalcase}/}] = useState($2)"
+    ]
+  },
+  "useEffect": {
+    "prefix": "useEffect",
+    "body": [
+      "useEffect(() => {",
+      "\t$1",
+      "\treturn () => {",
+      "\t\t$2",
+      "\t}",
+      "}, [$3])"
+    ]
+  },
+  "useContext": {
+    "prefix": "useContext",
+    "body": [
+      "const ${1:context} = useContext($2)"
+    ]
+  },
+  "describe": {
+    "prefix": "describe",
+    "body": [
+      "describe('$1', () => {",
+      "\t$0",
+      "})",
+      ""
+    ],
+    "description": "Testing `describe` block"
+  },
+  "test": {
+    "prefix": "test",
+    "body": [
+      "test('$1', () => {",
+      "\t$2",
+      "})",
+      "$0"
+    ],
+    "description": "Testing `test` block"
+  },
+  "it": {
+    "prefix": "it",
+    "body": [
+      "it('$1', () => {",
+      "\t$2",
+      "})",
+      "$0"
+    ],
+    "description": "Testing `it` block"
+  },
+  "React Native Class Component": {
+    "prefix": "rncc",
+    "body": [
+      "import React, { Component } from 'react'",
+      "import { StyleSheet, View } from 'react-native'",
+      "",
+      "class ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/} extends Component {",
+      "\trender() {",
+      "\t\treturn (",
+      "\t\t\t<View>",
+      "\t\t\t\t$1",
+      "\t\t\t</View>",
+      "\t\t)",
+      "\t}",
+      "}",
+      "",
+      "const styles = StyleSheet.create({})",
+      "",
+      "export default ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}",
+      ""
+    ]
+  },
+  "React Native Function": {
+    "prefix": "rnfc",
+    "body": [
+      "import React from 'react'",
+      "import { StyleSheet, View } from 'react-native'",
+      "",
+      "const ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/} = () => {",
+      "\treturn (",
+      "\t\t<View>",
+      "\t\t\t$1",
+      "\t\t</View>",
+      "\t)",
+      "}",
+      "",
+      "const styles = StyleSheet.create({})",
+      "",
+      "export default ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}",
+      ""
+    ]
+  },
+  "React Class Component": {
+    "prefix": "rcc",
+    "body": [
+      "import React, { Component } from 'react'",
+      "",
+      "interface ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}Props {",
+      "\t",
+      "}",
+      "",
+      "interface ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}State {",
+      "\t",
+      "}",
+      "",
+      "class ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/} extends Component<${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}Props, ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}State> {",
+      "\trender() {",
+      "\t\treturn (",
+      "\t\t\t<div>",
+      "\t\t\t\t$1",
+      "\t\t\t</div>",
+      "\t\t)",
+      "\t}",
+      "}",
+      "",
+      "export default ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}",
+      ""
+    ]
+  },
+  "React Function": {
+    "prefix": "rfc",
+    "body": [
+      "import React from 'react'",
+      "",
+      "const ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/} = () => {",
+      "\treturn (",
+      "\t\t<div>",
+      "\t\t\t$1",
+      "\t\t</div>",
+      "\t)",
+      "}",
+      "",
+      "export default ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}",
+      ""
+    ]
+  },
+  "shouldComponentUpdate": {
+    "prefix": "scu",
+    "body": [
+      "shouldComponentUpdate(nextProps: ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}Props, nextState: ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}State) {",
+      "\t$1",
+      "}",
+      ""
+    ],
+    "description": "Invoked before rendering when new props or state are being received. "
+  },
+  "componentDidUpdate": {
+    "prefix": "cdu",
+    "body": [
+      "componentDidUpdate(prevProps: ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}Props, prevState: ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}State) {",
+      "\t$1",
+      "}",
+      ""
+    ],
+    "description": "Invoked immediately after the component's updates are flushed to the DOM."
+  },
+  "getSnapshotBeforeUpdate": {
+    "prefix": "gsb",
+    "body": [
+      "getSnapshotBeforeUpdate(prevProps: ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}Props, prevState: ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}State) {",
+      "\t$0",
+      "}",
+      ""
+    ],
+    "description": "Invoked right before the most recently rendered output is committed to e.g. the DOM. It enables your component to capture current values"
+  },
+  "getDerivedStateFromProps": {
+    "prefix": "gds",
+    "body": [
+      "static getDerivedStateFromProps(nextProps: ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}Props, prevState: ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}State) {",
+      "\t$0",
+      "}",
+      ""
+    ],
+    "description": "Invoked after a component is instantiated as well as when it receives new props."
+  }
+}
