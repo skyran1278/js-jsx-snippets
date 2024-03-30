@@ -257,7 +257,7 @@
     "description": "Invoked immediately after the component's updates are flushed to the DOM."
   },
   "getSnapshotBeforeUpdate": {
-    "prefix": "gsbu",
+    "prefix": "gsb",
     "body": [
       "getSnapshotBeforeUpdate(prevProps, prevState) {",
       "\t$0",

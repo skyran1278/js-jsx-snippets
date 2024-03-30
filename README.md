@@ -45,7 +45,7 @@
 |        `scu` | `shouldComponentUpdate method`                           |
 |        `cdu` | `componentDidUpdate method`                              |
 |        `cwu` | `componentWillUnmount method`                            |
-|       `gsbu` | `getSnapshotBeforeUpdate method`                         |
+|        `gsb` | `getSnapshotBeforeUpdate method`                         |
 |        `gds` | `static getDerivedStateFromProps method`                 |
 |        `cdc` | `componentDidCatch method`                               |
 |        `sst` | `this.setState with object as parameter`                 |

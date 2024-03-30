@@ -331,7 +331,7 @@ export const reactTsSnippets: Snippets = {
       "Invoked immediately after the component's updates are flushed to the DOM.",
   },
   getSnapshotBeforeUpdate: {
-    prefix: 'gsbu',
+    prefix: 'gsb',
     body: [
       'getSnapshotBeforeUpdate(prevProps: ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}Props, prevState: ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}State) {',
       '\t$0',
@@ -368,7 +368,7 @@ export const reactJsSnippets: Snippets = {
       "Invoked immediately after the component's updates are flushed to the DOM.",
   },
   getSnapshotBeforeUpdate: {
-    prefix: 'gsbu',
+    prefix: 'gsb',
     body: ['getSnapshotBeforeUpdate(prevProps, prevState) {', '\t$0', '}', ''],
     description:
       'Invoked right before the most recently rendered output is committed to e.g. the DOM. It enables your component to capture current values',
