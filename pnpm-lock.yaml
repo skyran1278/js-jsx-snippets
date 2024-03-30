@@ -18,7 +18,7 @@ devDependencies:
     specifier: 18.x
     version: 18.19.26
   '@types/vscode':
-    specifier: ^1.87.0
+    specifier: ^1.58.0
     version: 1.87.0
   '@typescript-eslint/eslint-plugin':
     specifier: ^7.0.2
@@ -1585,6 +1585,7 @@ packages:
   /deep-extend@0.6.0:
     resolution: {integrity: sha512-LOHxIOaPYdHlJRtCQfDIVZtfw/ufM8+rVj649RIHzcm/vGwQRXFt6OPqIFWsm2XEMrNIEtWR64sY1LEKD2vAOA==}
     engines: {node: '>=4.0.0'}
+    requiresBuild: true
     dev: true
 
   /deep-is@0.1.4:
@@ -4413,6 +4414,7 @@ packages:
   /strip-json-comments@2.0.1:
     resolution: {integrity: sha512-4gB8na07fecVVkOI6Rs4e7T6NOTki5EmL7TUduTs6bu3EdnSycntVJ4re8kgZA+wx9IueI2Y11bfbgwtzuE0KQ==}
     engines: {node: '>=0.10.0'}
+    requiresBuild: true
     dev: true
 
   /strip-json-comments@3.1.1:
