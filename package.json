@@ -73,6 +73,7 @@
   },
   "devDependencies": {
     "@release-it/conventional-changelog": "^8.0.1",
+    "@types/lodash": "^4.17.0",
     "@types/mocha": "^10.0.6",
     "@types/node": "18.x",
     "@types/vscode": "^1.87.0",
@@ -83,6 +84,7 @@
     "dotenv-cli": "^7.4.1",
     "eslint": "^8.56.0",
     "import-sort-style-module": "^6.0.0",
+    "lodash": "^4.17.21",
     "nodemon": "^3.1.0",
     "prettier-plugin-import-sort": "^0.0.7",
     "release-it": "^17.1.1",

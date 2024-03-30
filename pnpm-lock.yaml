@@ -8,6 +8,9 @@ devDependencies:
   '@release-it/conventional-changelog':
     specifier: ^8.0.1
     version: 8.0.1(release-it@17.1.1)
+  '@types/lodash':
+    specifier: ^4.17.0
+    version: 4.17.0
   '@types/mocha':
     specifier: ^10.0.6
     version: 10.0.6
@@ -38,6 +41,9 @@ devDependencies:
   import-sort-style-module:
     specifier: ^6.0.0
     version: 6.0.0
+  lodash:
+    specifier: ^4.17.21
+    version: 4.17.21
   nodemon:
     specifier: ^3.1.0
     version: 3.1.0
@@ -583,6 +589,10 @@ packages:
 
   /@types/json-schema@7.0.15:
     resolution: {integrity: sha512-5+fP8P8MFNC+AyZCDxrB2pkZFPGzqQWUzpSeuuVLvm8VMcorNYavBqoFcxK8bQz4Qsbn4oUEEem4wDLfcysGHA==}
+    dev: true
+
+  /@types/lodash@4.17.0:
+    resolution: {integrity: sha512-t7dhREVv6dbNj0q17X12j7yDG4bD/DHYX7o5/DbDxobP0HnGPgpRz2Ej77aL7TZT3DSw13fqUTj8J4mMnqa7WA==}
     dev: true
 
   /@types/mocha@10.0.6:

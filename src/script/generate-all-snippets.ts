@@ -1,6 +1,8 @@
 import { writeFile } from 'fs/promises';
 import { join } from 'path';
 
+import mapValues from 'lodash/mapValues';
+
 import {
   Snippets,
   baseSnippets,
@@ -24,11 +26,13 @@ const generateNoSemicolonSnippets = async (
   path: string,
   snippets: Snippets,
 ) => {
-  for (const key in snippets) {
-    const value = snippets[key as keyof typeof snippets];
-    value.body = value.body.map((line) => line.replace(/;/, ''));
-  }
-  await writeFile(path, JSON.stringify(snippets, null, 2));
+  const noSemicolonSnippets = mapValues(snippets, (snippet) => {
+    return {
+      ...snippet,
+      body: snippet.body.map((line) => line.replace(/;/, '')),
+    };
+  });
+  await writeFile(path, JSON.stringify(noSemicolonSnippets, null, 2));
 };
 
 const generateAllSnippets = async () => {

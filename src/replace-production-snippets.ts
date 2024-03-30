@@ -34,8 +34,8 @@ export const replaceProductionSnippets = async () => {
   const jsKey: keyof typeof snippets = `js${importReactOnTop ? 'ImportReactOnTop' : ''}${semicolon ? 'Semicolon' : ''}`;
   const tsKey: keyof typeof snippets = `${typing ? 'ts' : 'js'}${importReactOnTop ? 'ImportReactOnTop' : ''}${semicolon ? 'Semicolon' : ''}`;
 
-  const jsSnippets = snippets[jsKey] || snippets.jsImportReactOnTopSemicolon;
-  const tsSnippets = snippets[tsKey] || snippets.tsImportReactOnTopSemicolon;
+  const jsSnippets = snippets[jsKey];
+  const tsSnippets = snippets[tsKey];
 
   await writeFile(
     join(__dirname, '../snippets/javascript-snippets.json'),

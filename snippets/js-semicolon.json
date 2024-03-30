@@ -2,19 +2,19 @@
   "Import": {
     "prefix": "imp",
     "body": [
-      "import ${2:name} from '${1:module}'$0"
+      "import ${2:name} from '${1:module}';$0"
     ]
   },
   "Import Destructing": {
     "prefix": "imd",
     "body": [
-      "import { $2 } from '${1:module}'$0"
+      "import { $2 } from '${1:module}';$0"
     ]
   },
   "Import PropTypes": {
     "prefix": "ipt",
     "body": [
-      "import PropTypes from 'prop-types'"
+      "import PropTypes from 'prop-types';"
     ]
   },
   "console.log": {
@@ -63,7 +63,7 @@
   "setState Function": {
     "prefix": "ssf",
     "body": [
-      "this.setState((state, props) => { return { $1 }})",
+      "this.setState((state, props) => { return { $1 }});",
       ""
     ],
     "description": "Performs a shallow merge of nextState into current state"
@@ -87,21 +87,21 @@
     "body": [
       "this.state = {",
       "\t$1",
-      "}"
+      "};"
     ],
     "description": "Creates empty state object. To be used in a constructor."
   },
   "bind": {
     "prefix": "bnd",
     "body": [
-      "this.$1 = this.$1.bind(this)"
+      "this.$1 = this.$1.bind(this);"
     ],
     "description": "Binds the this of a method. To be used inside a constructor"
   },
   "useState": {
     "prefix": "useState",
     "body": [
-      "const [${1:state}, set${1/(.*)/${1:/pascalcase}/}] = useState($2)"
+      "const [${1:state}, set${1/(.*)/${1:/pascalcase}/}] = useState($2);"
     ]
   },
   "useEffect": {
@@ -111,14 +111,14 @@
       "\t$1",
       "\treturn () => {",
       "\t\t$2",
-      "\t}",
-      "}, [$3])"
+      "\t};",
+      "}, [$3]);"
     ]
   },
   "useContext": {
     "prefix": "useContext",
     "body": [
-      "const ${1:context} = useContext($2)"
+      "const ${1:context} = useContext($2);"
     ]
   },
   "describe": {
@@ -126,7 +126,7 @@
     "body": [
       "describe('$1', () => {",
       "\t$0",
-      "})",
+      "});",
       ""
     ],
     "description": "Testing `describe` block"
@@ -136,7 +136,7 @@
     "body": [
       "test('$1', () => {",
       "\t$2",
-      "})",
+      "});",
       "$0"
     ],
     "description": "Testing `test` block"
@@ -146,7 +146,7 @@
     "body": [
       "it('$1', () => {",
       "\t$2",
-      "})",
+      "});",
       "$0"
     ],
     "description": "Testing `it` block"
@@ -154,8 +154,8 @@
   "React Native Class Component": {
     "prefix": "rncc",
     "body": [
-      "import React, { Component } from 'react'",
-      "import { StyleSheet, View } from 'react-native'",
+      "import React, { Component } from 'react';",
+      "import { StyleSheet, View } from 'react-native';",
       "",
       "class ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/} extends Component {",
       "\trender() {",
@@ -163,33 +163,33 @@
       "\t\t\t<View>",
       "\t\t\t\t$1",
       "\t\t\t</View>",
-      "\t\t)",
+      "\t\t);",
       "\t}",
       "}",
       "",
       "const styles = StyleSheet.create({})",
       "",
-      "export default ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}",
+      "export default ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/};",
       ""
     ]
   },
   "React Native Function": {
     "prefix": "rnfc",
     "body": [
-      "import React from 'react'",
-      "import { StyleSheet, View } from 'react-native'",
+      "import React from 'react';",
+      "import { StyleSheet, View } from 'react-native';",
       "",
       "const ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/} = () => {",
       "\treturn (",
       "\t\t<View>",
       "\t\t\t$1",
       "\t\t</View>",
-      "\t)",
+      "\t);",
       "}",
       "",
       "const styles = StyleSheet.create({})",
       "",
-      "export default ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}",
+      "export default ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/};",
       ""
     ]
   },
