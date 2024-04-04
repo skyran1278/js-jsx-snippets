@@ -27,7 +27,7 @@
   "console.log": {
     "prefix": "clg",
     "body": [
-      "console.log($1)$0"
+      "console.log($1);$0"
     ]
   },
   "componentDidMount": {

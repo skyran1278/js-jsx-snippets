@@ -31,7 +31,7 @@ export const importReactSnippets: Snippets = {
 export const baseSnippets: Snippets = {
   'console.log': {
     prefix: 'clg',
-    body: ['console.log($1)$0'],
+    body: ['console.log($1);$0'],
   },
 };
 
