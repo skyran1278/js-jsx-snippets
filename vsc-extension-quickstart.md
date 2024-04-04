@@ -11,18 +11,12 @@
 
 ## Get up and running straight away
 
+- `npm run watch` to start the compiler in watch mode.
 - Press `F5` to open a new window with your extension loaded.
-- Run your command from the command palette by pressing (`Ctrl+Shift+P` or `Cmd+Shift+P` on Mac) and typing `Hello World`.
 - Set breakpoints in your code inside `src/extension.ts` to debug your extension.
 - Find output from your extension in the debug console.
 
 ## Make changes
-
-1. import-react-on-top & semicolon: `ts-import-react-on-top-semicolon-typing.json` & `ts-import-react-on-top-semicolon.json`
-2. import-react-on-top: `ts-import-react-on-top-typing.json` & `ts-import-react-on-top.json` (remove semicolon from 1.)
-3. semicolon: `ts-semicolon-typing.json` & `ts-semicolon.json` (remove import react on top from 1.)
-   1. `rcc` & `rccp` need specific address
-4. none: `ts-typing.json` & `ts.json` (remove semicolon from 3.)
 
 - You can relaunch the extension from the debug toolbar after changing code in `src/extension.ts`.
 - You can also reload (`Ctrl+R` or `Cmd+R` on Mac) the VS Code window with your extension to load your changes.
