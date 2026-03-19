@@ -42,9 +42,13 @@ On activation and on any `jsJsxSnippets` configuration change:
 | `jsJsxSnippets.settings.semicolon` | `true` | Include trailing semicolons |
 | `jsJsxSnippets.settings.typing` | `true` | Use TypeScript interfaces for Props/State in TS snippets |
 
+The `typing` setting is not a separate variant dimension. When `typing=false`, the TypeScript production file is populated with the JS variant (no TS interfaces) — it reuses one of the 8 existing JS variants rather than generating a 9th file.
+
 ### Key Files
 
 - [src/script/snippets-template.ts](src/script/snippets-template.ts) — **edit this** to add/change snippets
 - [src/script/generate-all-snippets.ts](src/script/generate-all-snippets.ts) — assembles variant combinations; update if adding new snippet groups
 - `snippets/*.json` — generated files, do not edit manually
 - [src/extension.ts](src/extension.ts) — VSCode extension entry point (activation/deactivation)
+- [src/replace-production-snippets.ts](src/replace-production-snippets.ts) — runtime variant selection logic
+- [src/show-restart-message.ts](src/show-restart-message.ts) — prompts user to reload window after snippet swap
