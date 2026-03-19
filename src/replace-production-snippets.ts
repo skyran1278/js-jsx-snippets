@@ -1,7 +1,7 @@
 import { readFile, writeFile } from 'fs/promises';
 import { join } from 'path';
 
-import { ExtensionContext } from 'vscode';
+import { ExtensionContext, window } from 'vscode';
 
 import { getSnippetKeys } from './snippet-keys';
 import { showRestartMessage } from './show-restart-message';
@@ -21,14 +21,23 @@ export const replaceProductionSnippets = async (
     context.globalState.get<string>('jsJsxSnippets.tsVariant', '') !==
     versionedTs;
 
-  const [jsBuf, tsBuf] = await Promise.all([
-    jsNeedsUpdate
-      ? readFile(join(__dirname, '../snippets', jsFile))
-      : Promise.resolve(null),
-    tsNeedsUpdate
-      ? readFile(join(__dirname, '../snippets', tsFile))
-      : Promise.resolve(null),
-  ]);
+  let jsBuf: Buffer | null = null;
+  let tsBuf: Buffer | null = null;
+  try {
+    [jsBuf, tsBuf] = await Promise.all([
+      jsNeedsUpdate
+        ? readFile(join(__dirname, '../snippets', jsFile))
+        : Promise.resolve(null),
+      tsNeedsUpdate
+        ? readFile(join(__dirname, '../snippets', tsFile))
+        : Promise.resolve(null),
+    ]);
+  } catch (err) {
+    window.showErrorMessage(
+      `Js Jsx Snippets: Failed to read snippet files. ${err instanceof Error ? err.message : String(err)}`,
+    );
+    return;
+  }
 
   const writes: Promise<void>[] = [];
   if (jsBuf) {
@@ -56,5 +65,7 @@ export const replaceProductionSnippets = async (
       context.globalState.update('jsJsxSnippets.tsVariant', versionedTs),
   ]);
 
-  await showRestartMessage();
+  if (writes.length > 0) {
+    await showRestartMessage();
+  }
 };
