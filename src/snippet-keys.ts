@@ -1,5 +1,8 @@
 import { workspace } from 'vscode';
 
+export const JS_VARIANT_KEY = 'jsJsxSnippets.jsVariant';
+export const TS_VARIANT_KEY = 'jsJsxSnippets.tsVariant';
+
 export interface SnippetKeys {
   jsKey: string;
   tsKey: string;

@@ -1,6 +1,6 @@
 import { ConfigurationChangeEvent, ExtensionContext, workspace } from 'vscode';
 
-import { isSnippetsDifference } from './is-snippets-difference';
+import { isVariantCacheStale } from './is-variant-cache-stale';
 import { replaceProductionSnippets } from './replace-production-snippets';
 
 export async function activate(context: ExtensionContext) {
@@ -14,7 +14,7 @@ export async function activate(context: ExtensionContext) {
     ),
   );
 
-  if (isSnippetsDifference(context)) {
+  if (isVariantCacheStale(context)) {
     await replaceProductionSnippets(context);
   }
 }

@@ -3,7 +3,7 @@ import { join } from 'path';
 
 import { ExtensionContext, window } from 'vscode';
 
-import { getSnippetKeys } from './snippet-keys';
+import { JS_VARIANT_KEY, TS_VARIANT_KEY, getSnippetKeys } from './snippet-keys';
 import { showRestartMessage } from './show-restart-message';
 
 export const replaceProductionSnippets = async (
@@ -15,10 +15,10 @@ export const replaceProductionSnippets = async (
   const versionedTs = `${version}::${tsKey}`;
 
   const jsNeedsUpdate =
-    context.globalState.get<string>('jsJsxSnippets.jsVariant', '') !==
+    context.globalState.get<string>(JS_VARIANT_KEY, '') !==
     versionedJs;
   const tsNeedsUpdate =
-    context.globalState.get<string>('jsJsxSnippets.tsVariant', '') !==
+    context.globalState.get<string>(TS_VARIANT_KEY, '') !==
     versionedTs;
 
   let jsBuf: Buffer | null = null;
@@ -56,14 +56,21 @@ export const replaceProductionSnippets = async (
       ),
     );
   }
-  await Promise.all(writes);
+  try {
+    await Promise.all(writes);
+  } catch (err) {
+    window.showErrorMessage(
+      `Js Jsx Snippets: Failed to write snippet files. ${err instanceof Error ? err.message : String(err)}`,
+    );
+    return;
+  }
 
-  await Promise.all([
-    jsNeedsUpdate &&
-      context.globalState.update('jsJsxSnippets.jsVariant', versionedJs),
-    tsNeedsUpdate &&
-      context.globalState.update('jsJsxSnippets.tsVariant', versionedTs),
-  ]);
+  if (jsNeedsUpdate) {
+    await context.globalState.update(JS_VARIANT_KEY, versionedJs);
+  }
+  if (tsNeedsUpdate) {
+    await context.globalState.update(TS_VARIANT_KEY, versionedTs);
+  }
 
   if (writes.length > 0) {
     await showRestartMessage();
