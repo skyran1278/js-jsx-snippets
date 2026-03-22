@@ -19,7 +19,10 @@
     "Snippets"
   ],
   "activationEvents": [
-    "onStartupFinished"
+    "onLanguage:javascript",
+    "onLanguage:javascriptreact",
+    "onLanguage:typescript",
+    "onLanguage:typescriptreact"
   ],
   "main": "./build/extension.js",
   "contributes": {
