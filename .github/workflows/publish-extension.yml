@@ -1,0 +1,30 @@
+name: Publish Extension
+
+on:
+  push:
+    tags:
+      - 'v[0-9]+.[0-9]+.[0-9]+'
+
+jobs:
+  publish:
+    name: Publish Extension
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Package extension
+        run: npx @vscode/vsce package --no-dependencies
+
+      - name: Publish to VS Marketplace
+        run: npx @vscode/vsce publish --no-dependencies -p ${{ secrets.VSCE_PAT }}
+
+      - name: Publish to Open VSX
+        run: npx ovsx publish *.vsix -p ${{ secrets.OVSX_PAT }}
