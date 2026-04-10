@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "types": ["node", "mocha", "vscode"], // https://devblogs.microsoft.com/typescript/announcing-typescript-6-0/#types-now-defaults-to-[]
     "module": "Node16",
     "target": "ES2022",
     "outDir": "build",
